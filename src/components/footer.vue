@@ -4,8 +4,14 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 footer {
     background-color: darkmagenta;
 }
 </style>
+
+<script>
+export default {
+    name : 'footer',
+}
+</script>

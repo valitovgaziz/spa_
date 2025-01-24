@@ -4,8 +4,15 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 search_line {
-    background-color: burlywood;
+    background-color: rgb(135, 222, 152);
 }
 </style>
+
+
+<script>
+export default {
+    name : 'serach_line',
+}
+</script>

@@ -5,8 +5,15 @@
 </template>
 
 
-<style>
+<style scoped>
 h1 {
     background-color: aquamarine;
 }
 </style>
+
+
+<script>
+export default {
+    name : 'header',
+}
+</script>

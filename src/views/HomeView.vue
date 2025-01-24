@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
-    <h2>This is welcome page</h2>
-  </div>
+  <Header />
+  <SearchLine />
+  <Footer />
 </template>
 
 
@@ -14,3 +14,17 @@
   }
 }
 </style>
+
+<script>
+import Header from '../components/header.vue';
+import Footer from '../components/footer.vue';
+import SearchLine from '../components/searchLine.vue';
+
+export default {
+  components: {
+    Header,
+    Footer,
+    SearchLine,
+  },
+};
+</script>
