@@ -5,8 +5,9 @@
 </template>
 
 <style scoped>
-search_line {
+.search_line {
     background-color: rgb(135, 222, 152);
+    display: flexbox;
 }
 </style>
 

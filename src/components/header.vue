@@ -1,13 +1,14 @@
 <template>
-    <div>
+    <div class="header">
         <h1>This is an headere</h1>
     </div>
 </template>
 
 
 <style scoped>
-h1 {
+.header {
     background-color: aquamarine;
+    display: flexbox;
 }
 </style>
 
