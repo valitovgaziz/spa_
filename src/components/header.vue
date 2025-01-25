@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <h1>This is an headere</h1>
+        <router-link to="/about"><img src="./images/logo150x150.png" alt="logo">ООО "ИКЦ Ял Арба"</router-link>
     </div>
 </template>
 
@@ -8,7 +8,13 @@
 <style scoped>
 .header {
     background-color: aquamarine;
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+}
+img {
+    height: 1.5rem;
 }
 </style>
 

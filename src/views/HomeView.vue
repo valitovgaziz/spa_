@@ -1,11 +1,21 @@
 <template>
-  <Header />
-  <SearchLine />
-  <Footer />
+  <div class="main">
+    <Header />
+    <SearchLine />
+    <Footer />
+  </div>
 </template>
 
 
 <style>
+.main {
+  min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 @media (min-width: 1024px) {
   .main {
     min-height: 100vh;
