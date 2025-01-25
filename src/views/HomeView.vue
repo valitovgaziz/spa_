@@ -11,7 +11,8 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 </style>

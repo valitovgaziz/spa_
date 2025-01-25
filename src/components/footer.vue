@@ -1,14 +1,16 @@
 <template>
     <div class="footer">
-        <router-link to="/about">about</router-link>
-        <h1>This is an footer</h1>
+        <p>footer</p>
+        <router-link to="/about">О нас</router-link>
+        <router-link to="/">На главную</router-link>
     </div>
 </template>
 
 <style scoped>
 .footer {
     background-color: darkmagenta;
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
 }
 </style>
 

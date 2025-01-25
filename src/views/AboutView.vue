@@ -1,16 +1,29 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-  <router-link to="/">На главную</router-link>
+  <Header />
+  <About />
+  <Footer />
 </template>
 
 <style>
 @media (min-width: 1024px) {
   .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    background-color: rgb(179, 231, 185);
   }
 }
 </style>
+
+
+
+<script>
+import Header from '../components/header.vue';
+import Footer from '../components/footer.vue';
+import About from '../components/about.vue';
+
+export default {
+  components: {
+    Header,
+    Footer,
+    About,
+  },
+};
+</script>

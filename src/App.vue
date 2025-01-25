@@ -3,8 +3,14 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+  <div class="main">
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
+<style>
+.main {
+  display: flex;
+  flex-direction: column;
+}
 </style>
