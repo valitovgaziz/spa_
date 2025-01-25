@@ -1,8 +1,9 @@
 <template>
     <div class="footer">
         <router-link to="/about">О нас</router-link>
-        <MenuIcon />
-        <router-link to="/">На главную</router-link>
+        <router-link to="/">
+            <img src="./images/icons/home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="home">
+        </router-link>
     </div>
 </template>
 
@@ -23,6 +24,6 @@ export default {
     components: {
         MenuIcon,
     },
-    name : 'footer',
+    name: 'footer',
 };
 </script>
