@@ -1,6 +1,7 @@
 <template>
     <div class="footer">
         <router-link to="/about">О нас</router-link>
+        <MenuIcon />
         <router-link to="/">На главную</router-link>
     </div>
 </template>
@@ -17,7 +18,11 @@
 </style>
 
 <script>
+import MenuIcon from 'vue-material-design-icons/Menu.vue';
 export default {
+    components: {
+        MenuIcon,
+    },
     name : 'footer',
-}
+};
 </script>
