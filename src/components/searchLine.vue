@@ -1,6 +1,9 @@
 <template>
     <div class="search_line">
-        <h1>Search line</h1>
+        <form action="HTML/searchResult.html" id="search_form" name="search_request" target="_self">
+            <label for="search_input">Введите желаемый вид отдыха</label>
+            <input id="search_input" type="text" autofocus placeholder=".   .   .">
+        </form>
     </div>
 </template>
 
@@ -14,6 +17,6 @@
 
 <script>
 export default {
-    name : 'serach_line',
+    name: 'serach_line',
 }
 </script>

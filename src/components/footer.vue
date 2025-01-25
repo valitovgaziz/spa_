@@ -1,6 +1,5 @@
 <template>
     <div class="footer">
-        <p>footer</p>
         <router-link to="/about">О нас</router-link>
         <router-link to="/">На главную</router-link>
     </div>
@@ -8,9 +7,12 @@
 
 <style scoped>
 .footer {
+    height: 3rem;
     background-color: darkmagenta;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 0 2rem;
 }
 </style>
 
