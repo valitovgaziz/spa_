@@ -1,9 +1,15 @@
 <template>
     <div class="footer">
         <router-link to="/about">О нас</router-link>
+        <div v-on:click="goBack">
+            <img src="./images/icons/arrow_back_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="back">
+        </div>
         <router-link to="/">
             <img src="./images/icons/home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="home">
         </router-link>
+        <div v-on:click="goForward">
+            <img src="./images/icons/arrow_forward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="forward">
+        </div>
     </div>
 </template>
 
@@ -16,6 +22,9 @@
     align-items: center;
     padding: 0 2rem;
 }
+button {
+    
+}
 </style>
 
 <script>
@@ -25,5 +34,14 @@ export default {
         MenuIcon,
     },
     name: 'footer',
+    methods: {
+        goBack() {
+            this.$router.go(-1);
+        },
+        goForward() {
+            this.$router.go(1);
+        }
+    }
 };
+
 </script>
