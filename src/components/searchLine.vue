@@ -10,7 +10,13 @@
 <style scoped>
 .search_line {
     background-color: rgb(135, 222, 152);
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
 }
 </style>
 
