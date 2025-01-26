@@ -6,8 +6,8 @@ html {
 }
 
 body {
-    margin: 5px;
-    height: 100vh;
+    margin: 1rem 5px 5px 5px;
+    height: fit-content;
     border: 1px solid;
     min-height: 900px;
     background-color: yellowgreen;

@@ -1,8 +1,8 @@
 <template>
     <div class="search_line">
         <form action="HTML/searchResult.html" id="search_form" name="search_request" target="_self">
-            <label for="search_input">Введите желаемый вид отдыха</label>
-            <input id="search_input" type="text" autofocus placeholder=".   .   .">
+            <label for="search_input" class="f-item">Поисковая строка</label>
+            <input id="search_input" type="text" autofocus placeholder=".   .   ." class="f-item">
         </form>
     </div>
 </template>
@@ -16,7 +16,10 @@
 form {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem;
+    align-items: center;
+}
+.f-item {
+    margin: 0 0 0.4rem 0;
 }
 </style>
 

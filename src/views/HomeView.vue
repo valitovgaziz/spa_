@@ -9,7 +9,7 @@
 
 <style>
 .main {
-  min-height: 100vh;
+  min-height: fit-content;
   width: 100%;
   display: flex;
   align-items: center;
