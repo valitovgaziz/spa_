@@ -6,7 +6,7 @@
             <ul>                
                 <li><router-link to="/profile">Профиль</router-link></li>
                 <li>Настройки</li>
-                <li>Написать в техпотдержку</li>
+                <li><router-link to="/support">Написать в техпотдержку</router-link></li>
                 <li>Оставить отзыв</li>
                 <li>Вход/Выход</li>
             </ul>

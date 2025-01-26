@@ -7,7 +7,7 @@
 </template>
 
 
-<style>
+<style scoped>
 .main {
   min-height: fit-content;
   width: 100%;
