@@ -16,13 +16,30 @@
 </template>
 
 
-<style scoped>
+<style>
 .header {
     background-color: aquamarine;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 2rem;
+}
+
+ul {
+    margin: 0 0.5rem 0.5rem 0;
+}
+
+li {
+    margin: 3px 0;
+    border: solid 1px black;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: rgb(153, 204, 204);
+    border-radius: 1rem;
 }
 
 img {
@@ -32,11 +49,6 @@ img {
 .menu {
     background-color: darkgreen;
     width: fit-content;
-}
-
-.menu:hover {
-    cursor: pointer;
-    background-color: rgb(75, 137, 137);
 }
 </style>
 
