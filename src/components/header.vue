@@ -3,9 +3,10 @@
         <router-link to="/about"><img src="./images/logo150x150.png" alt="logo">ООО "ИКЦ Ял Арба"</router-link>
         <div class="menu">
             <img src="./images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu">
-            <ul>                
+            <ul>
                 <li><router-link to="/profile">Профиль</router-link></li>
                 <li>Настройки</li>
+                <li><router-link to="/about">О нас</router-link></li>
                 <li><router-link to="/support">Написать в техпотдержку</router-link></li>
                 <li> <router-link to="/feetback">Оставить отзыв</router-link></li>
                 <li>Вход/Выход</li>
@@ -23,6 +24,7 @@
     align-items: center;
     height: 2rem;
 }
+
 img {
     height: 1.5rem;
 }
@@ -31,6 +33,7 @@ img {
     background-color: darkgreen;
     width: fit-content;
 }
+
 .menu:hover {
     cursor: pointer;
     background-color: rgb(75, 137, 137);
@@ -40,6 +43,6 @@ img {
 
 <script>
 export default {
-    name : 'header',
+    name: 'header',
 }
 </script>

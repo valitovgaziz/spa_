@@ -7,8 +7,7 @@
   </template>
   
   
-  <style scoped>
-  
+  <style>
   </style>
   
   <script>

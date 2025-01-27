@@ -1,6 +1,6 @@
 <template>
-    <div class="main">
-        <h3>This is an message send to support page</h3>
+    <div class="support">
+        <h3>This is an message send to support</h3>
     </div>
 </template>
 

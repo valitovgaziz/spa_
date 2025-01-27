@@ -1,10 +1,10 @@
 <template>
     <div class="fetback">
-        <h3>This is and add feedback components</h3>
+        <h3>Написать отзыв о приложении в целом. Впечатления, мнения, удобство пользования и т.д.</h3>
     </div>
 </template>
 
-<style scoped>
+<style>
 .fetback{
     background: rgb(201, 158, 158);
 }
