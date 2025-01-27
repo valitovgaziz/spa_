@@ -1,7 +1,7 @@
 <template>
     <div class="menu">
-        <img src="./images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu">
-        <ul>
+        <img src="../images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" v-on:click="changeDisplay" id="img-menu">
+        <ul id="ul-menu">
             <li><router-link to="/profile">Профиль</router-link></li>
             <li>Настройки</li>
             <li><router-link to="/about">О нас</router-link></li>
@@ -18,7 +18,13 @@
     width: fit-content;
 }
 
+#img-menu:hover {
+    cursor: pointer;
+    background-color: rgb(71, 135, 105);
+}
+
 ul {
+    display: none;
     margin: 0 0.5rem 0.5rem 0;
 }
 
@@ -40,4 +46,12 @@ li:hover {
 export default {
     name: 'menu',
 }
+
+function changeDisplay() {
+    var ul = document.getElementById('ul-menu');
+    if (ul.style.display === 'none') {
+        ul.style.display = 'flex';
+    }
+}
+
 </script>

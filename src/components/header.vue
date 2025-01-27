@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <router-link to="/about"><img src="./images/logo150x150.png" alt="logo">ООО "ИКЦ Ял Арба"</router-link>
+        <router-link to="/about" id="rl-about"><img src="./images/logo150x150.png" alt="logo"><p>ООО "ИКЦ Ял Арба"</p></router-link>
         <Menu />
     </div>
 </template>
@@ -8,11 +8,19 @@
 
 <style>
 .header {
+    width: 100%;
     background-color: aquamarine;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 2rem;
+    justify-content: space-around;
+    height: 3rem;
+}
+
+#rl-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 img {
