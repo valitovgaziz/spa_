@@ -30,6 +30,11 @@ const router = createRouter({
       path: '/feetback',
       name: 'feetback',
       component: () => import('../views/FeetbackView.vue'),
+    },
+    {
+      path: '/results',
+      name: 'results',
+      component: () => import('../views/ResultsView.vue'),
     }
   ],
 })

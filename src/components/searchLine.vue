@@ -1,6 +1,6 @@
 <template>
     <div class="search_line">
-        <form action="HTML/searchResult.html" id="search_form" name="search_request" target="_self">
+        <form id="search_form" name="search_request" action="/results">
             <label for="search_input" class="f-item">Поисковая строка</label>
             <input id="search_input" type="text" autofocus placeholder=".   .   ." class="f-item">
         </form>
@@ -13,11 +13,13 @@
     display: flex;
     flex-direction: column;
 }
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .f-item {
     margin: 0 0 0.4rem 0;
 }
@@ -28,4 +30,5 @@ form {
 export default {
     name: 'serach_line',
 }
+
 </script>
