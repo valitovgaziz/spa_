@@ -8,25 +8,7 @@
   
   
   <style scoped>
-  .main {
-    min-height: fit-content;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: wheat;
-  }
   
-  @media (min-width: 1024px) {
-    .main {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  }
   </style>
   
   <script>

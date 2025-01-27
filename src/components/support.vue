@@ -1,10 +1,10 @@
 <template>
-    <div class="support">
+    <div class="main">
         <h3>This is an message send to support page</h3>
     </div>
 </template>
 
-<style>
+<style scoped>
 .support {
     background-color: darkkhaki;
 }

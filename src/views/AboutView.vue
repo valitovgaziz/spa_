@@ -7,11 +7,6 @@
 </template>
 
 <style scoped>
-@media (min-width: 1024px) {
-  .about {
-    background-color: rgb(179, 231, 185);
-  }
-}
 </style>
 
 
