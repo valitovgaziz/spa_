@@ -1,27 +1,25 @@
 <template>
     <div class="main">
-      <Header />
-      <Results />
-      <Footer />
+        <Header />
+        <Results />
+        <Footer />
     </div>
-  </template>
-  
-  <style>
-  
-  </style>
-  
-  
-  
-  <script>
-  import Header from '../components/header.vue';
-  import Footer from '../components/footer.vue';
-  import Results from '../components/serch_results/results.vue';
-  
-  export default {
+</template>
+
+<style></style>
+
+
+
+<script>
+import Header from '../components/header.vue';
+import Footer from '../components/footer.vue';
+import Results from '../components/saerch_results/results.vue';
+
+export default {
     components: {
-      Header,
-      Footer,
-      Results,
+        Header,
+        Footer,
+        Results,
     },
-  };
-  </script>
+};
+</script>

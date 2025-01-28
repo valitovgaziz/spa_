@@ -19,16 +19,6 @@
   justify-content: space-between;
   background-color: wheat;
 }
-
-@media (min-width: 600px) {
-  .main {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
 </style>
 
 <script>

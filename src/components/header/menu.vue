@@ -1,7 +1,7 @@
 <template>
-    <div class="menu">
-        <img src="../images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" v-on:click="changeDisplay" id="img-menu">
-        <ul id="ul-menu">
+    <div class="menu" v-on:click="changeDisplay">
+        <img src="../images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" id="img-m">
+        <ul id="ul-m">
             <li><router-link to="/profile">Профиль</router-link></li>
             <li>Настройки</li>
             <li><router-link to="/about">О нас</router-link></li>
@@ -14,17 +14,23 @@
 
 <style scoped>
 .menu {
-    background-color: darkgreen;
-    width: fit-content;
+    height: 95%;
 }
 
-#img-menu:hover {
+#img-m {
+    height: 100%;
+    border: solid 1px rgb(33, 159, 181);
+    border-radius: 1rem;
+}
+
+#img-m:hover {
     cursor: pointer;
     background-color: rgb(71, 135, 105);
 }
 
 ul {
     display: none;
+    overflow: hidden;
     margin: 0 0.5rem 0.5rem 0;
 }
 
@@ -45,12 +51,17 @@ li:hover {
 <script>
 export default {
     name: 'menu',
+    methods: {
+        changeDisplay: changeDisplay
+    }
 }
 
 function changeDisplay() {
-    var ul = document.getElementById('ul-menu');
+    var ul = document.querySelector('ul');
     if (ul.style.display === 'none') {
-        ul.style.display = 'flex';
+        ul.style.display = 'block';
+    } else {
+        ul.style.display = 'none';
     }
 }
 
