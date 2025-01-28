@@ -3,14 +3,14 @@
         <img src="../images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" id="img-m">
 
         <ul id="ul-m">
-            <li><router-link to="/profile">Профиль</router-link></li>
-            <li><router-link to="/settings">Настройки</router-link></li>
-            <li><router-link to="/about">О нас</router-link></li>
-            <li><router-link to="/support">Написать в техпотдержку</router-link></li>
-            <li><router-link to="/feetback">Оставить отзыв</router-link></li>
-            <li><router-link to="/registration" id="registration">Регистрация</router-link></li>
-            <li><router-link to="/login" id="login">Выйти</router-link></li>
-            <li><router-link to="/logout" id="logout">Выйти</router-link></li>
+            <li v-on:click="$refs.profile.$el.click()"><router-link to="/profile" ref="profile">Профиль</router-link></li>
+            <li v-on:click="$refs.settings.$el.click()"><router-link to="/settings" ref="settings">Настройки</router-link></li>
+            <li v-on:click="$refs.about.$el.click()"><router-link to="/about" ref="about">О нас</router-link></li>
+            <li v-on:click="$refs.support.$el.click()"><router-link to="/support" ref="support">Написать в техпотдержку</router-link></li>
+            <li v-on:click="$refs.feetback.$el.click()"><router-link to="/feetback" ref="feetback">Оставить отзыв</router-link></li>
+            <li v-on:click="$refs.registration.$el.click()"><router-link to="/registration" ref="registration">Регистрация</router-link></li>
+            <li v-on:click="$refs.login.$el.click()"><router-link to="/login" ref="login">Войти</router-link></li>
+            <li v-on:click="$refs.logout.$el.click()"><router-link to="/logout" ref="logout">Выйти</router-link></li>
         </ul>
 
     </div>
@@ -53,6 +53,7 @@ li:hover {
     background-color: rgb(153, 204, 204);
     border-radius: 1rem;
 }
+
 </style>
 
 <script>

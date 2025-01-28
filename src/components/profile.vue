@@ -1,10 +1,10 @@
 <template>
-    <h3>This is an profile</h3>
+    <div class="profile">
+        <h3>This is an profile</h3>
+    </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
 
 <script>
 export default {
