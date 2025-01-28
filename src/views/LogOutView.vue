@@ -1,0 +1,26 @@
+<template>
+    <div class="main">
+      <Header />
+      <LogOut />
+      <Footer />
+    </div>
+  </template>
+  
+  <style>
+  </style>
+  
+  
+  
+  <script>
+  import Header from '../components/header.vue';
+  import Footer from '../components/footer.vue';
+  import LogOut from '../components/logInOut/logout.vue';
+  
+  export default {
+    components: {
+      Header,
+      Footer,
+      LogOut,
+    },
+  };
+  </script>
