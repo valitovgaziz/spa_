@@ -10,7 +10,7 @@
 <style>
 .main {
   min-height: fit-content;
-  min-width: 600px;
+  min-width: 400px;
   width: 100%;
   height: 100vh;
   display: flex;

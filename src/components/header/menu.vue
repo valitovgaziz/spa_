@@ -1,6 +1,7 @@
 <template>
-    <div class="menu" v-on:click="changeDisplay">
+    <div class="menu" v-on:click="OpenClose">
         <img src="../images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" id="img-m">
+
         <ul id="ul-m">
             <li><router-link to="/profile">Профиль</router-link></li>
             <li>Настройки</li>
@@ -9,12 +10,16 @@
             <li> <router-link to="/feetback">Оставить отзыв</router-link></li>
             <li>Вход/Выход</li>
         </ul>
+
     </div>
 </template>
 
 <style scoped>
 .menu {
-    height: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #img-m {
@@ -28,10 +33,10 @@
     background-color: rgb(71, 135, 105);
 }
 
-ul {
-    display: none;
-    overflow: hidden;
+#ul-m {
+    visibility: hidden;
     margin: 0 0.5rem 0.5rem 0;
+    border: 1px solid;
 }
 
 li {
@@ -52,16 +57,16 @@ li:hover {
 export default {
     name: 'menu',
     methods: {
-        changeDisplay: changeDisplay
+        OpenClose: OpenCloseM
     }
 }
 
-function changeDisplay() {
+function OpenCloseM() {
     var ul = document.querySelector('ul');
-    if (ul.style.display === 'none') {
-        ul.style.display = 'block';
+    if (ul.style.visibility === 'hidden') {
+        ul.style.visibility = 'visible';
     } else {
-        ul.style.display = 'none';
+        ul.style.visibility = 'hidden';
     }
 }
 
