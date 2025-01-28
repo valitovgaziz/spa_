@@ -1,26 +1,25 @@
 <template>
     <div class="main">
-      <Header />
-      <LogIn />
-      <Footer />
+        <Header />
+        <LogIn />
+        <Footer />
     </div>
-  </template>
-  
-  <style>
-  </style>
-  
-  
-  
-  <script>
-  import Header from '../components/header.vue';
-  import Footer from '../components/footer.vue';
-  import LogIn from '../components/logInOut/login.vue';
-  
-  export default {
+</template>
+
+<style></style>
+
+
+
+<script>
+import Header from '../components/header.vue';
+import Footer from '../components/footer.vue';
+import LogIn from '../components/logInOut/login.vue';
+
+export default {
     components: {
-      Header,
-      Footer,
-      LogIn,
+        Header,
+        Footer,
+        LogIn,
     },
-  };
-  </script>
+};
+</script>

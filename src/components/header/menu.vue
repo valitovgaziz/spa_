@@ -9,7 +9,7 @@
             <li><router-link to="/support">Написать в техпотдержку</router-link></li>
             <li><router-link to="/feetback">Оставить отзыв</router-link></li>
             <li><router-link to="/registration" id="registration">Регистрация</router-link></li>
-            <li><router-link to="/login" id="login">Войти</router-link></li>
+            <li><router-link to="/login" id="login">Выйти</router-link></li>
             <li><router-link to="/logout" id="logout">Выйти</router-link></li>
         </ul>
 
