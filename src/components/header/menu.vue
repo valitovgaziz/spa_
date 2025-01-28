@@ -4,7 +4,7 @@
 
         <ul id="ul-m">
             <li><router-link to="/profile">Профиль</router-link></li>
-            <li>Настройки</li>
+            <li><router-link to="/settings">Настройки</router-link></li>
             <li><router-link to="/about">О нас</router-link></li>
             <li><router-link to="/support">Написать в техпотдержку</router-link></li>
             <li> <router-link to="/feetback">Оставить отзыв</router-link></li>
