@@ -14,7 +14,7 @@
   <script>
   import Header from '../components/header.vue';
   import Footer from '../components/footer.vue';
-  import LogOut from '../components/logInOut/logout.vue';
+  import LogOut from '../components/inout/logout.vue';
   
   export default {
     components: {

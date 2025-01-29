@@ -13,7 +13,7 @@
 <script>
 import Header from '../components/header.vue';
 import Footer from '../components/footer.vue';
-import LogIn from '../components/logInOut/login.vue';
+import LogIn from '../components/inout/login.vue';
 
 export default {
     components: {
