@@ -7,18 +7,7 @@
 </template>
 
 
-<style>
-.main {
-  min-height: fit-content;
-  min-width: 400px;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: wheat;
-}
+<style src="../assets/css/style.css">
 </style>
 
 <script>
