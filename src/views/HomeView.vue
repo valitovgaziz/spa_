@@ -7,7 +7,7 @@
 </template>
 
 
-<style src="../assets/css/style.css">
+<style src="../assets/main.css">
 </style>
 
 <script>
