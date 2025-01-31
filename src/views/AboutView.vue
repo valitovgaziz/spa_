@@ -1,13 +1,10 @@
 <template>
-  <div class="main">
-    <Header />
-    <About />
-    <Footer />
-  </div>
+  <Header />
+  <About />
+  <Footer />
 </template>
 
-<style>
-</style>
+<style></style>
 
 
 

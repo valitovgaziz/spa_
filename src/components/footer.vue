@@ -16,10 +16,16 @@
 .footer {
     height: 3rem;
     background-color: darkmagenta;
+    border-radius: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 2rem;
+    margin: 0 0 0.5rem 0;
+}
+.navigation {
+    padding: 0 1rem;
+    margin: 0 1rem;
 }
 .navigation:hover {
     cursor: pointer;
