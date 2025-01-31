@@ -1,8 +1,9 @@
 <template>
     <div class="search_line">
-        <form id="search_form" name="search_request" action="/results">
+        <form @submit.prevent="search" id="search_form" name="search_request" action="results">
             <label for="search_input" class="f-item">Свобода и приключения!</label>
-            <input id="search_input" type="text" autofocus placeholder=".   .   ." class="f-item">
+            <input id="search_input" type="text" autofocus placeholder=".   .   ." class="f-item" v-model="query">
+            <button type="submit">Искать</button>
         </form>
     </div>
 </template>
@@ -29,6 +30,17 @@ form {
 <script>
 export default {
     name: 'serach_line',
+    data() {
+        return {
+            query: ''
+        }
+    },
+    methods: {
+        search() {
+            this.$router.push('/results');
+            console.log(this.query);
+        }
+    }
 }
 
 </script>
