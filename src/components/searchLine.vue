@@ -1,7 +1,7 @@
 <template>
     <div class="search_line">
         <form id="search_form" name="search_request" action="/results">
-            <label for="search_input" class="f-item">Поисковая строка</label>
+            <label for="search_input" class="f-item">Поисковая строка Changed by crone tab That's work fine!</label>
             <input id="search_input" type="text" autofocus placeholder=".   .   ." class="f-item">
         </form>
     </div>
