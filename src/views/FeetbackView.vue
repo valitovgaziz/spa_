@@ -12,7 +12,7 @@
 
 
 <script>
-import Header from '../components/header.vue';
+import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
 import Feetback from '../components/feetback.vue';
 

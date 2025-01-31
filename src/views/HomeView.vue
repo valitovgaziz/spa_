@@ -1,17 +1,14 @@
 <template>
-  <div class="main">
-    <Header />
-    <SearchLine />
-    <Footer />
-  </div>
+  <Header />
+  <SearchLine />
+  <Footer />
 </template>
 
 
-<style src="../assets/main.css">
-</style>
+<style src="../assets/main.css"></style>
 
 <script>
-import Header from '../components/header.vue';
+import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
 import SearchLine from '../components/searchLine.vue';
 

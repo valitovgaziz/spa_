@@ -19,15 +19,20 @@
 <style scoped>
 .menu {
     height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
 }
 
 #img-m {
-    height: 100%;
+    height: 2rem;
+    width: 2rem;
     border: solid 1px rgb(33, 159, 181);
     border-radius: 1rem;
+    background-color: rgb(37, 78, 78);
+    margin: 0 1rem 0 0;
 }
 
 #img-m:hover {
@@ -36,8 +41,12 @@
 }
 
 #ul-m {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    width: fit-content;
     visibility: hidden;
-    margin: 0 0.5rem 0.5rem 0;
+    margin: auto;
     border: 1px solid;
 }
 

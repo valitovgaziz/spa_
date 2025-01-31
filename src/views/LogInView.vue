@@ -11,7 +11,7 @@
 
 
 <script>
-import Header from '../components/header.vue';
+import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
 import LogIn from '../components/inout/login.vue';
 
