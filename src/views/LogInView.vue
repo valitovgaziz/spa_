@@ -1,9 +1,7 @@
 <template>
-    <div class="main">
-        <Header />
-        <LogIn />
-        <Footer />
-    </div>
+    <Header />
+    <LogIn />
+    <Footer />
 </template>
 
 <style></style>

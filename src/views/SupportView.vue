@@ -1,9 +1,7 @@
 <template>
-  <div class="main">
-    <Header />
-    <Support />
-    <Footer />
-  </div>
+  <Header />
+  <Support />
+  <Footer />
 </template>
 
 <style></style>

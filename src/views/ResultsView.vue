@@ -1,10 +1,8 @@
 <template>
-    <div class="main">
-        <Header />
-        <SearchLine />
-        <Results />
-        <Footer />
-    </div>
+    <Header />
+    <SearchLine />
+    <Results />
+    <Footer />
 </template>
 
 <style></style>

@@ -1,13 +1,10 @@
 <template>
-    <div class="main">
-        <Header />
-        <Feetback />
-        <Footer />
-    </div>
+    <Header />
+    <Feetback />
+    <Footer />
 </template>
 
-<style>
-</style>
+<style></style>
 
 
 
