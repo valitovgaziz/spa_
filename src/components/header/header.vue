@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <router-link to="/about" id="rl-about"><img src="../images/logo150x150.png" alt="logo"><p>ООО "ИКЦ Ял Арба"</p></router-link>
+        <router-link to="/about" id="rl-about"><img src="../images/logo150x150.png" alt="logo"><p>Freedom&Adventure</p></router-link>
         <Menu />
     </div>
 </template>

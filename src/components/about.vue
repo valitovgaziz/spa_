@@ -9,23 +9,37 @@
 </template>
 
 <style scoped>
+
 .about {
-    background-color: rgb(137, 183, 182);
+    background-color: #8B4513; /* коричневый цвет */
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: none;
+    padding: 1rem;
+    border-radius: 1rem;
 }
+
 
 .donat-coffee {
     margin: 1rem;
     background-color: rgb(89, 219, 109);
-    box-shadow: 0 4px 8px 0 rgba(27, 45, 37, 0.2);
+    box-shadow: 1px 4px 8px 0 rgba(27, 45, 37, 0.2);
+    border-radius: 1rem;
+}
+
+.donat-coffee:hover {
+    cursor: pointer;
+    background-color: rgb(10, 150, 50);
+    color: white;
+    box-shadow: 1px 4px 8px rgb(10, 150, 50);
 }
 
 .QRcod {
     height: 200px;
     display: flexbox;
+    border-radius: 0.5rem;
 }
 </style>
 
