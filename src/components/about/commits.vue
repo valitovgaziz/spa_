@@ -45,7 +45,12 @@
   
   <style scoped>
   ul {
+    max-width: 1024px;
     list-style-type: none;
     padding: 0;
+  }
+
+  li {
+    margin: 0.5rem 0;
   }
   </style>x``

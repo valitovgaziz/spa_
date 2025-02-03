@@ -1,6 +1,7 @@
 <template>
   <Header />
   <About />
+  <h1>Our news</h1>
   <Commits />
   <Footer />
 </template>
