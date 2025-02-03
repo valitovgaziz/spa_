@@ -66,21 +66,22 @@
         return true;
       },
       async sendRegistrationData(data) {
-        try {
-          const response = await fetch('/register', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          });
+        console.log("Register by this data: ", data);
+        // try {
+        //   const response = await fetch('/register', {
+        //     method: 'POST',
+        //     headers: {
+        //       'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify(data)
+        //   });
   
-          if (!response.ok) {
-            throw new Error('Ошибка при регистрации');
-          }
-        } catch (error) {
-          throw error;
-        }
+        //   if (!response.ok) {
+        //     throw new Error('Ошибка при регистрации');
+        //   }
+        // } catch (error) {
+        //   throw error;
+        // }
       }
     }
   };
