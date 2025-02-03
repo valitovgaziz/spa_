@@ -4,7 +4,7 @@
         <p>Приложение для туристов</p>
         <p>Прошу потдержать проект</p>
         <button v-on:click="donat" class="donat-coffee">Донат на кофе</button>
-        <img src="./images/photo_2025-01-25_05-57-24.jpg" alt="Донат QRcod" class="QRcod">
+        <img src="../images/photo_2025-01-25_05-57-24.jpg" alt="Донат QRcod" class="QRcod">
     </div>
 </template>
 
