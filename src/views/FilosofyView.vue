@@ -9,9 +9,9 @@
 </style>
 
 <script>
-import Filosofy from '../components/filosofy.vue';
 import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
+import Filosofy from '../components/filosofy.vue';
 
 export default {
     components: {
