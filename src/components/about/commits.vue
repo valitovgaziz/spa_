@@ -5,7 +5,7 @@
     </ul>
     <ul v-else>
       <li v-for="commit in commits" :key="commit.sha">
-        <strong>{{ commit.sha.slice(0, 8) }}:</strong> {{ commit.commit.message }}
+        <strong>{{ commit.commit.author.date.slice(0, 11) }}:</strong> {{ commit.commit.message }} <i>{{ commit.author.login }}</i>
       </li>
     </ul>
   </template>

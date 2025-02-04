@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <router-link to="/about" id="rl-about"><img src="../images/logo150x150.png" alt="logo"></router-link>
-        <p>Trip*Freedom*Adventure</p>
+        <router-link to="/filosofy" id="rl-filosofy">Trip*Freedom*Adventure</router-link>
         <Menu />
     </div>
 </template>
@@ -26,13 +26,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 1rem;
-    padding: 0 1rem 0 1rem;
+    justify-items: center;
+    border-radius: 50%;
+    padding: 1rem;  
+    height: 1rem;
+    width: 1rem;
 }
 
 #rl-about:hover {
     cursor: pointer;
-    background-color: rgb(155, 236, 236);
+    background-color: rgb(85, 117, 117);
 }
 
 img {
@@ -40,6 +43,18 @@ img {
     padding: 0 1rem 0 0;
 }
 
+#rl-filosofy {
+    all: unset;
+    box-shadow: 1px 2px 3px rgb(63, 145, 130);
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+#rl-filosofy:hover {
+    cursor: pointer;
+    background-color: rgb(143, 202, 202);
+    box-shadow: 2px 3px 4px rgb(64,146, 132);
+}
 </style>
 
 
