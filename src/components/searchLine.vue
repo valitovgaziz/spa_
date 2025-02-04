@@ -1,7 +1,7 @@
 <template>
     <div class="search_line">
         <form @submit.prevent="search" id="search_form" name="search_request" action="results">
-            <label for="search_input" class="f-item">Свобода и приключения!</label>
+            <label for="search_input" class="f-item">Путешествия - Свобода - Приключения!</label>
             <input id="search_input" type="text" autofocus placeholder=".   .   ." class="f-item" v-model="query">
             <button type="submit">Искать</button>
         </form>
