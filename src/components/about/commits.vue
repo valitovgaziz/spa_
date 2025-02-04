@@ -52,5 +52,7 @@
 
   li {
     margin: 0.5rem 0;
+    white-space: pre-wrap;
+    width: 100%;
   }
   </style>x``

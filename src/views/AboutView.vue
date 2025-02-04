@@ -1,7 +1,7 @@
 <template>
   <Header />
   <About />
-  <h1>Our news</h1>
+  <Developers />
   <Commits />
   <Footer />
 </template>
@@ -15,12 +15,14 @@ import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
 import About from '../components/about/about.vue';
 import Commits from '../components/about/commits.vue';
+import Developers from '../components/about/developers.vue';
 
 export default {
   components: {
     Header,
     Footer,
     About,
+    Developers,
     Commits,
   },
 };
