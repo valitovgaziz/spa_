@@ -10,7 +10,7 @@
 <script>
 import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
-import SearchLine from '../components/searchLine.vue';
+import SearchLine from '../components/searchLine/searchLine.vue';
 
 export default {
   components: {
