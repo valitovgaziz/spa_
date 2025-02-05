@@ -11,7 +11,7 @@
 <script>
 import Header from '../components/header/header.vue';
 import Footer from '../components/footer.vue';
-import Feetback from '../components/feetback.vue';
+import Feetback from '../components/feeback/feetback.vue';
 
 export default {
     components: {
