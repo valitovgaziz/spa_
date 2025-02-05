@@ -35,7 +35,7 @@
       // Загрузка отзывов из базы данных
       async loadReviews() {
         try {
-          const response = await axios.get('http://localhost:3000/api/reviews');
+          const response = await axios.get('http://213.108.4.63:3000/api/reviews');
           this.reviews = response.data.slice(0, 5); // Показываем только последние 5 отзывов
         } catch (error) {
           console.error('Ошибка при загрузке отзывов:', error);
@@ -46,7 +46,7 @@
         if (!this.newReview.trim()) return;
   
         try {
-          const response = await axios.post('http://localhost:3000/api/reviews', {
+          const response = await axios.post('http://213.108.4.63:3000/api/reviews', {
             text: this.newReview,
           });
           this.reviews.unshift(response.data); // Добавляем новый отзыв в начало списка
