@@ -51,5 +51,5 @@ app.post('/api/reviews', async (req, res) => {
 
 // Запуск сервера
 app.listen(port, () => {
-  console.log(`Сервер запущен на http://localhost:${port}`);
+  console.log(`Сервер запущен на http://213.108.4.63:${port}`);
 });
