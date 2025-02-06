@@ -1,8 +1,8 @@
 <template>
-    <div class="menu" v-on:click="OpenClose">
+    <div class="menu" v-on:click="toggleMenu">
         <img src="../images/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" id="img-m">
 
-        <ul id="ul-m">
+        <ul id="ul-m" :class="{ visible: isMenuVisible }">
             <li v-on:click="$refs.profile.$el.click()"><router-link to="/profile" ref="profile">Профиль</router-link></li>
             <li v-on:click="$refs.settings.$el.click()"><router-link to="/settings" ref="settings">Настройки</router-link></li>
             <li v-on:click="$refs.about.$el.click()"><router-link to="/about" ref="about">О нас</router-link></li>
@@ -12,7 +12,6 @@
             <li v-on:click="$refs.login.$el.click()"><router-link to="/login" ref="login">Войти</router-link></li>
             <li v-on:click="$refs.logout.$el.click()"><router-link to="/logout" ref="logout">Выйти</router-link></li>
         </ul>
-
     </div>
 </template>
 
@@ -50,6 +49,10 @@
     border: 1px solid;
 }
 
+.visible {
+    visibility: visible !important;
+}
+
 li {
     margin: 3px 0;
     border: solid 1px black;
@@ -62,24 +65,32 @@ li:hover {
     background-color: rgb(153, 204, 204);
     border-radius: 1rem;
 }
-
 </style>
 
 <script>
 export default {
     name: 'menu',
+    data() {
+        return {
+            isMenuVisible: false
+        }
+    },
+    mounted() {
+        document.addEventListener('click', this.closeMenuIfClickedOutside)
+    },
+    beforeUnmount() {
+        document.removeEventListener('click', this.closeMenuIfClickedOutside)
+    },
     methods: {
-        OpenClose: OpenCloseM
+        toggleMenu() {
+            this.isMenuVisible = !this.isMenuVisible;
+        },
+        closeMenuIfClickedOutside(event) {
+            const menuElement = this.$el;
+            if (!menuElement.contains(event.target)) {
+                this.isMenuVisible = false;
+            }
+        }
     }
 }
-
-function OpenCloseM() {
-    var ul = document.querySelector('ul');
-    if (ul.style.visibility === 'hidden') {
-        ul.style.visibility = 'visible';
-    } else {
-        ul.style.visibility = 'hidden';
-    }
-}
-
 </script>

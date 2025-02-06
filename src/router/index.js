@@ -60,7 +60,7 @@ const router = createRouter({
       path: '/filosofy',
       name: 'filosofy',
       component: () => import('../views/FilosofyView.vue')
-    }
+    },
   ],
 })
 
