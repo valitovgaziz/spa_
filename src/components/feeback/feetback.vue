@@ -6,11 +6,14 @@
     <div class="add-review">
       <textarea v-model="newReview" placeholder="Напишите ваш отзыв..." rows="4"></textarea>
       <button @click="submitReview" :disabled="!newReview.trim()">Оставить отзыв</button>
+      <button @click="toggleShowAll" :disabled="reviews.length === 0">
+        {{ showAll ? 'Скрыть' : 'Показать все' }}
+      </button>
     </div>
 
-    <!-- Список последних отзывов -->
+    <!-- Список отзывов -->
     <div class="reviews-list">
-      <div v-for="review in reviews" :key="review.id" class="review-item">
+      <div v-for="review in displayedReviews" :key="review.id" class="review-item">
         <p>{{ review.text }}</p>
         <small>{{ formatDate(review.created_at) }}</small>
       </div>
@@ -24,9 +27,16 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      reviews: [], // Список отзывов
+      reviews: [], // Список всех отзывов
       newReview: '', // Текст нового отзыва
+      showAll: false, // Флаг для отображения всех отзывов
     };
+  },
+  computed: {
+    // Вычисляемое свойство для отображения отзывов
+    displayedReviews() {
+      return this.showAll ? this.reviews : this.reviews.slice(0, 5);
+    }
   },
   mounted() {
     this.loadReviews(); // Загружаем отзывы при монтировании компонента
@@ -38,7 +48,7 @@ export default {
         const response = await axios.get('http://213.108.4.63:3000/reviews');
         this.reviews = response.data.sort((a, b) => {
           return new Date(b.created_at) - new Date(a.created_at); // Сортируем по убыванию
-        }).slice(0, 5);                                           // Показываем только последние 5 отзывов
+        });
       } catch (error) {
         console.error('Ошибка при загрузке отзывов:', error);
       }
@@ -53,9 +63,6 @@ export default {
         });
         this.reviews.unshift(response.data); // Добавляем новый отзыв в начало списка
         this.newReview = ''; // Очищаем текстовое поле
-        if (this.reviews.length > 5) {
-          this.reviews.pop(); // Удаляем самый старый отзыв, если их больше 5
-        }
       } catch (error) {
         console.error('Ошибка при отправке отзыва:', error);
       }
@@ -65,6 +72,10 @@ export default {
       const date = new Date(dateString);
       return date.toLocaleString(); // Форматируем дату в удобный формат
     },
+    // Переключение между "Показать все" и "Скрыть"
+    toggleShowAll() {
+      this.showAll = !this.showAll; // Инвертируем значение флага
+    }
   },
 };
 </script>
@@ -91,6 +102,7 @@ export default {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .add-review button:disabled {
