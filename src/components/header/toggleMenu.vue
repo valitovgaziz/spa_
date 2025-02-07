@@ -31,6 +31,11 @@
     width: 30px;
     height: 24px;
     cursor: pointer;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    box-shadow: 1px 2px 3px rgb(112, 179, 205);
   }
   
   .hamburger-line {
