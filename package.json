@@ -16,6 +16,7 @@
     "pg": "^8.13.1",
     "spa": "file:",
     "vue": "^3.5.13",
+    "vue-i18n": "^11.0.0-rc.1",
     "vue-material-design-icons": "^5.3.1",
     "vue-router": "^4.5.0"
   },

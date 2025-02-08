@@ -21,7 +21,7 @@
 
 img {
     height: 2rem;
-    box-shadow: 1px 2px 3px rgb(117, 194, 208);
+    box-shadow: 1px 2px 3px rgb(179, 210, 216);
     border-radius: 50%;
     padding: 0.4rem;
 }
