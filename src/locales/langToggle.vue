@@ -61,6 +61,12 @@ export default {
   padding: 0.5rem;
 }
 
+.lang-icon:hover {
+  box-shadow: 0px 0px 6px rgb(117, 194, 208);
+  box-shadow: 0px 0px 7px rgb(117, 194, 208);
+  box-shadow: 0px 0px 8px rgb(117, 194, 208);
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
