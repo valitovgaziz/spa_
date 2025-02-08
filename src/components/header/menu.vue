@@ -1,6 +1,6 @@
 <template>
     <div class="menu" v-on:click="toggleMenu">
-        <HamburgerMenu />
+        <HamburgerMenu :isMenuVisible="isMenuVisible" />
         <ul id="ul-m" :class="{ visible: isMenuVisible }">
             <li v-on:click="$refs.profile.$el.click()"><router-link to="/profile" ref="profile">Профиль</router-link>
             </li>
