@@ -34,28 +34,36 @@
     position: absolute;
     top: 3rem;
     right: 1rem;
-    width: fit-content;
+    width: 25vw;
+    min-width: 300px;
     visibility: hidden;
     margin: auto;
     border-radius: 1rem;
     box-shadow: 1px 2px 3px blue;
     padding: 0.5rem;
+    background-color: white;
+    list-style-type: none;
 }
 
 li {
-    width: fit-content;
+    width: 100%;
     padding: 0.3rem;
+}
+
+li * {
+    text-decoration: none;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: rgb(97, 189, 189);
+    border-radius: 0.3rem;
 }
 
 .visible {
     visibility: visible !important;
 }
 
-li:hover {
-    cursor: pointer;
-    background-color: rgb(153, 204, 204);
-    border-radius: 0.3rem;
-}
 </style>
 
 <script>
