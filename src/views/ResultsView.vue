@@ -10,7 +10,7 @@
 
 
 <script>
-import Header from '../components/header/header.vue';
+import Header from '../components/header/fullHeader.vue';
 import Footer from '../components/footer.vue';
 import Results from '../components/saerch_results/results.vue';
 import searchLine from '@/components/searchLine/searchLine.vue';

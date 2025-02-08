@@ -10,7 +10,7 @@
 
 
 <script>
-import Menu from './menu.vue';
+import Menu from './headerMemu.vue';
 import Logo from './logo-rl-about.vue';
 import TFA from './tripFreedomAdventure.vue';
 import Lang from '../../locales/langToggle.vue';

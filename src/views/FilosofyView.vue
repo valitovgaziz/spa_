@@ -9,7 +9,7 @@
 </style>
 
 <script>
-import Header from '../components/header/header.vue';
+import Header from '../components/header/fullHeader.vue';
 import Footer from '../components/footer.vue';
 import Filosofy from '../components/filosofy.vue';
 
