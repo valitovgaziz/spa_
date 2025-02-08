@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <FHeader />
   <About />
   <Developers />
   <Commits />
@@ -11,7 +11,7 @@
 
 
 <script>
-import Header from '../components/header/fullHeader.vue';
+import FHeader from '../components/header/fullHeader.vue';
 import Footer from '../components/footer.vue';
 import About from '../components/about/about.vue';
 import Commits from '../components/about/commits.vue';
@@ -19,7 +19,7 @@ import Developers from '../components/about/developers.vue';
 
 export default {
   components: {
-    Header,
+    FHeader,
     Footer,
     About,
     Developers,

@@ -15,6 +15,7 @@ const messages = {
 };
 
 const i18n = createI18n({
+  legacy: false,
   locale: 'en', // Установите язык по умолчанию
   fallbackLocale: 'ru', // Язык, который будет использоваться, если перевод для текущего языка отсутствует
   messages,

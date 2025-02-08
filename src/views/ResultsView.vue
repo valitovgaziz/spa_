@@ -1,5 +1,5 @@
 <template>
-    <Header />
+    <FHeader />
     <SearchLine />
     <Results />
     <Footer />
@@ -10,7 +10,7 @@
 
 
 <script>
-import Header from '../components/header/fullHeader.vue';
+import FHeader from '../components/header/fullHeader.vue';
 import Footer from '../components/footer.vue';
 import Results from '../components/saerch_results/results.vue';
 import searchLine from '@/components/searchLine/searchLine.vue';
@@ -18,7 +18,7 @@ import SearchLine from '@/components/searchLine/searchLine.vue';
 
 export default {
     components: {
-        Header,
+        FHeader,
         Footer,
         Results,
         SearchLine,

@@ -1,13 +1,13 @@
 import './assets/main.css';
 
 import { createApp } from 'vue';
-import App from './App.vue';
+import SPA_VUE_App from './App.vue';
 import router from './router';
 import i18n from './locales/i18n.js';
 
-const app = createApp(App);
+const spaAppVue3 = createApp(SPA_VUE_App);
 
-app.use(router);
-app.use(i18n);
+spaAppVue3.use(router);
+spaAppVue3.use(i18n);
 
-app.mount('#app');
+spaAppVue3.mount('#app');

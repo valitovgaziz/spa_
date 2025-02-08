@@ -1,8 +1,10 @@
 {
-    "welcome": "Добро пожаловать",
-    "menu": {
-        "home": "Home",
-        "about": "About",
-        "contact": "Contact"
+    "languageCode": "ru",
+    "messages": {
+        "title": "Заголовок",
+        "description": "Описание",
+        "buttonText": "Кнопка",
+        "errorMessage": "Сообщение об ошибке",
+        "searchPlaceholder": "Поиск..."
     }
 }

@@ -1,8 +1,10 @@
 {
-    "welcome": "Салям",
-    "menu": {
-        "home": "Төп биткә",
-        "about": "Беҙҙең турала",
-        "contact": "Бәйләнештәр"
+    "languageCode": "bak",
+    "messages": {
+        "title": "Исем",
+        "description": "Анлатма",
+        "buttonText": "Баҫма",
+        "errorMessage": "Хата",
+        "searchPlaceholder": "еҙлаү яҙма"
     }
 }

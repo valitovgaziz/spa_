@@ -12,26 +12,6 @@
     </div>
 </template>
 
-<style scoped>
-.footer {
-    height: 3rem;
-    background-color: darkmagenta;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 2rem;
-    margin: 0 0 0.5rem 0;
-}
-.navigation {
-    padding: 0 1rem;
-    margin: 0 1rem;
-}
-.navigation:hover {
-    cursor: pointer;
-    background-color: rgb(112, 48, 171);
-}
-</style>
 
 <script>
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
@@ -51,3 +31,26 @@ export default {
 };
 
 </script>
+
+<style scoped>
+.footer {
+    height: 3rem;
+    background-color: darkmagenta;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.navigation {
+    padding: 0 1rem;
+    margin: 0 1rem;
+}
+
+.navigation:hover {
+    cursor: pointer;
+    background-color: rgb(112, 48, 171);
+}
+</style>

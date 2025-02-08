@@ -1,5 +1,5 @@
 <template>
-    <Header />
+    <FHeader />
     <Registration />
     <Footer />
 </template>
@@ -9,13 +9,13 @@
 
 
 <script>
-import Header from '../components/header/fullHeader.vue';
+import FHeader from '../components/header/fullHeader.vue';
 import Footer from '../components/footer.vue';
 import Registration from '../components/inout/registration.vue';
 
 export default {
     components: {
-        Header,
+        FHeader,
         Footer,
         Registration,
     },
