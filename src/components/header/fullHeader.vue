@@ -1,7 +1,6 @@
 <template>
     <div class="header">
         <Logo />
-        <TFA />
         <Lang />
         <Menu />
     </div>
@@ -12,14 +11,12 @@
 <script>
 import Menu from './headerMemu.vue';
 import Logo from './logo-rl-about.vue';
-import TFA from './tripFreedomAdventure.vue';
 import Lang from '../../locales/langToggle.vue';
 
 export default {
     components: {
         Menu,
         Logo,
-        TFA,
         Lang,
     },
     name: 'header',

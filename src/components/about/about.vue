@@ -1,6 +1,6 @@
 <template>
     <div class="about">
-        <h1>Freedom & Adventure</h1>
+        <FTA />
         <p>Приложение для туристов</p>
         <p>Прошу потдержать проект</p>
         <button v-on:click="donat" class="donat-coffee">Донат на кофе</button>
@@ -8,10 +8,29 @@
     </div>
 </template>
 
-<style scoped>
 
+<script>
+import { useI18n } from 'vue-i18n';
+import FTA from './filosofy.vue';
+
+export default {
+    setup() {
+        const { t } = useI18n();
+        return { t };
+    },
+    methods: {
+        donat() {
+            window.open("https://www.tinkoff.ru/rm/r_fFXNVwPxmH.VMEQXkfWxO/Ho4MN83486", "_blank");
+        }
+    },
+    components: {
+        FTA,
+    }
+}
+</script>
+
+<style scoped>
 .about {
-    background-color: #8B4513; /* коричневый цвет */
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -43,13 +62,3 @@
     border-radius: 0.5rem;
 }
 </style>
-
-<script>
-export default {
-    methods: {
-        donat() {
-            window.open("https://www.tinkoff.ru/rm/r_fFXNVwPxmH.VMEQXkfWxO/Ho4MN83486", "_blank");
-        }
-    }
-}
-</script>
