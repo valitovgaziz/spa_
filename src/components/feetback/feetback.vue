@@ -51,7 +51,7 @@ export default {
     // Загрузка отзывов из базы данных
     async loadReviews() {
       try {
-        const response = await axios.get('https://yalarba.ru/api/reviews');
+        const response = await axios.get('https://yalarba.ru/api/reviews/reviews');
         this.reviews = response.data.sort((a, b) => {
           return new Date(b.created_at) - new Date(a.created_at); // Сортируем по убыванию
         });
@@ -64,7 +64,7 @@ export default {
       if (!this.newReview.trim()) return;
 
       try {
-        const response = await axios.post('https://yalarba.ru/api/reviews', {
+        const response = await axios.post('https://yalarba.ru/api/reviews/reviews', {
           text: this.newReview,
         });
         this.reviews.unshift(response.data); // Добавляем новый отзыв в начало списка
