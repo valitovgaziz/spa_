@@ -2,23 +2,89 @@
     <div class="menu" v-on:click="toggleMenu">
         <HamburgerMenu :isMenuVisible="isMenuVisible" />
         <ul id="ul-m" :class="{ visible: isMenuVisible }">
-            <li v-on:click="$refs.profile.$el.click()"><router-link to="/profile" ref="profile">Профиль</router-link>
+            <li v-on:click="$refs.profile.$el.click()">
+                <router-link to="/profile" ref="profile">
+                    {{ t('messages.profile') }}
+                </router-link>
             </li>
-            <li v-on:click="$refs.settings.$el.click()"><router-link to="/settings"
-                    ref="settings">Настройки</router-link>
+            <li v-on:click="$refs.settings.$el.click()">
+                <router-link to="/settings" ref="settings">
+                    {{ t('messages.settings') }}
+                </router-link>
             </li>
-            <li v-on:click="$refs.about.$el.click()"><router-link to="/about" ref="about">О нас</router-link></li>
-            <li v-on:click="$refs.support.$el.click()"><router-link to="/support" ref="support">Написать в
-                    техпотдержку</router-link></li>
-            <li v-on:click="$refs.feetback.$el.click()"><router-link to="/feetback" ref="feetback">Оставить
-                    отзыв</router-link></li>
-            <li v-on:click="$refs.registration.$el.click()"><router-link to="/registration"
-                    ref="registration">Регистрация</router-link></li>
-            <li v-on:click="$refs.login.$el.click()"><router-link to="/login" ref="login">Войти</router-link></li>
-            <li v-on:click="$refs.logout.$el.click()"><router-link to="/logout" ref="logout">Выйти</router-link></li>
+            <li v-on:click="$refs.about.$el.click()">
+                <router-link to="/about" ref="about">
+                    {{ t('messages.about') }}
+                </router-link>
+            </li>
+            <li v-on:click="$refs.support.$el.click()">
+                <router-link to="/support" ref="support">
+                    {{ t('messages.technicalSupport') }}
+                </router-link>
+            </li>
+            <li v-on:click="$refs.feetback.$el.click()">
+                <router-link to="/feetback" ref="feetback">
+                    {{ t('messages.writeFeedback') }}
+                </router-link>
+            </li>
+            <li v-on:click="$refs.registration.$el.click()">
+                <router-link to="/registration" ref="registration">
+                    {{ t('messages.registration') }}
+                </router-link>
+            </li>
+            <li v-on:click="$refs.login.$el.click()">
+                <router-link to="/login" ref="login">
+                    {{ t('messages.login') }}
+                </router-link>
+            </li>
+            <li v-on:click="$refs.logout.$el.click()">
+                <router-link to="/logout" ref="logout">
+                    {{ t('messages.logout') }}
+                </router-link>
+            </li>
         </ul>
     </div>
 </template>
+
+<script>
+import { useI18n } from 'vue-i18n';
+import HamburgerMenu from './toggleMenu.vue';
+
+export default {
+    setup() {
+        const { t } = useI18n();
+        return { t };
+    },
+    name: 'menu',
+    components: {
+        HamburgerMenu,
+    },
+    data() {
+        return {
+            isMenuVisible: false,
+        }
+    },
+    mounted() {
+        document.addEventListener('click', this.closeMenuIfClickedOutside)
+    },
+    beforeUnmount() {
+        document.removeEventListener('click', this.closeMenuIfClickedOutside)
+    },
+    methods: {
+        toggleMenu() {
+            this.isMenuVisible = !this.isMenuVisible;
+        },
+        closeMenuIfClickedOutside(event) {
+            const menuElement = this.$el;
+            if (!menuElement.contains(event.target)) {
+                this.isMenuVisible = false;
+            }
+        },
+    }
+
+}
+</script>
+
 
 <style scoped>
 .menu {
@@ -63,39 +129,4 @@ li:hover {
 .visible {
     visibility: visible !important;
 }
-
 </style>
-
-<script>
-import HamburgerMenu from './toggleMenu.vue';
-
-export default {
-    name: 'menu',
-    components: {
-        HamburgerMenu,
-    },
-    data() {
-        return {
-            isMenuVisible: false,
-        }
-    },
-    mounted() {
-        document.addEventListener('click', this.closeMenuIfClickedOutside)
-    },
-    beforeUnmount() {
-        document.removeEventListener('click', this.closeMenuIfClickedOutside)
-    },
-    methods: {
-        toggleMenu() {
-            this.isMenuVisible = !this.isMenuVisible;
-        },
-        closeMenuIfClickedOutside(event) {
-            const menuElement = this.$el;
-            if (!menuElement.contains(event.target)) {
-                this.isMenuVisible = false;
-            }
-        },
-    }
-
-}
-</script>
