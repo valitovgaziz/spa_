@@ -1,6 +1,7 @@
 <template>
     <div class="header">
         <Logo />
+        <DarkThemeToggleI />
         <Lang />
         <Menu />
     </div>
@@ -12,12 +13,14 @@
 import Menu from './headerMemu.vue';
 import Logo from './logo-rl-about.vue';
 import Lang from '../../locales/langToggle.vue';
+import DarkThemeToggleI from '../toggels/darkThemeToggle.vue';
 
 export default {
     components: {
         Menu,
         Logo,
         Lang,
+        DarkThemeToggleI,
     },
     name: 'header',
 }

@@ -1,11 +1,26 @@
+/* Светлая тема (по умолчанию) */
+:root {
+  --background-color: #ffffff;
+  --text-color: #1d1c1c;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+  --background-color: #282828;
+  --text-color: #3cb756;
+}
+
 /* Общие стили */
 html,
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   height: fit-content;
   width: 100%;
   font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body {
