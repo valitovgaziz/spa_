@@ -11,7 +11,7 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer.vue';
+import Footer from '../components/footer/footer.vue';
 import Results from '../components/saerch_results/results.vue';
 import searchLine from '@/components/searchLine/searchLine.vue';
 import SearchLine from '@/components/searchLine/searchLine.vue';

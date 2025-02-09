@@ -12,7 +12,7 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer.vue';
+import Footer from '../components/footer/footer.vue';
 import About from '../components/about/about.vue';
 import Commits from '../components/about/commits.vue';
 import Developers from '../components/about/developers.vue';

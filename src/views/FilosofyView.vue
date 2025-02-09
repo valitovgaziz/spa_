@@ -10,7 +10,7 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer.vue';
+import Footer from '../components/footer/footer.vue';
 import Filosofy from '../components/filosofy.vue';
 
 export default {
