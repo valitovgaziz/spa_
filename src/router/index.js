@@ -57,11 +57,6 @@ const router = createRouter({
       component: () => import('../views/LogOutView.vue')
     },
     {
-      path: '/filosofy',
-      name: 'filosofy',
-      component: () => import('../views/FilosofyView.vue')
-    },
-    {
       path: '/restObject',
       name: 'restObject',
       component: () => import('../views/RestObjectView.vue')
