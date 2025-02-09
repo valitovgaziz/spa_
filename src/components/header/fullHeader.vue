@@ -30,7 +30,9 @@ export default {
 
 <style scoped>
 .header {
-    width: 100%;
+    max-width: 1024px;
+    width: 50%;
+    min-width: 400px;
     height: 100%;
     margin: 0;
     padding: 0;

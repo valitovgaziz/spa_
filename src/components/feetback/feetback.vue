@@ -1,6 +1,7 @@
 <template>
   <div class="reviews-container">
-    <h2>Отзывы о приложении</h2>
+    <h2>{{ t('messages.reviews.h2review') }}</h2>
+    <h4>{{ t('messages.reviews.h4review') }}</h4>
 
     <!-- Форма для добавления отзыва -->
     <div class="add-review">
@@ -23,8 +24,13 @@
 
 <script>
 import axios from 'axios';
+import { useI18n } from 'vue-i18n';
 
 export default {
+  setup() {
+    const { t } = useI18n();
+    return { t };
+  },
   data() {
     return {
       reviews: [], // Список всех отзывов
