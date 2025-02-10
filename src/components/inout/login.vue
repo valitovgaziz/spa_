@@ -83,10 +83,10 @@
   <style scoped>
   .login-form {
     max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 3px #609f7d;
   }
   
   .form-group {
@@ -99,10 +99,12 @@
   }
   
   .form-group input {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: var(--light-dark-background-color);
+    color: var(--text-color);
+    box-shadow: inset 1px 2px 3px #609f7d;
   }
   
   button {
