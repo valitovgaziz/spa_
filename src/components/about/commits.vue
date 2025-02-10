@@ -4,7 +4,7 @@
       Произошла ошибка: {{ error }}
     </ul>
     <ul v-else>
-      <h2>Commits</h2>
+      <h2>0.0.3 Commits</h2>
       <li v-for="commit in commits" :key="commit.sha">
         <i>
           {{ commit.author.login }}
