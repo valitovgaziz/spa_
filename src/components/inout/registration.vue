@@ -91,25 +91,28 @@
   .register-form {
     max-width: 400px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 3px #609f7d;
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
   
   .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
   }
   
   .form-group input {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: var(--light-dark-background-color);
+    color: var(--texgt-color);
+    box-shadow: 1px 2px 3px inset #439c5f;
   }
   
   button {
