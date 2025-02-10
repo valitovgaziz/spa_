@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 /* Светлая тема (по умолчанию) */
 :root {
   --background-color: #ffffff;
@@ -57,7 +59,7 @@ body {
     min-height: 80vh;
     min-width: auto;
     max-width: 90vw;
-    width: 95%; /* Можно сделать еще меньше, если требуется */
+    width: 90%; /* Можно сделать еще меньше, если требуется */
     border-radius: 0.5rem;
   }
 }
