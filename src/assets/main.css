@@ -2,15 +2,15 @@
 :root {
   --background-color: #ffffff;
   --text-color: #1d1c1c;
-  --light-dark-background-clor: #ffffff;
-  --light-dark-text-color: #2d5f38;
+  --light-dark-background-color: #ffffff;
+  --light-dark-text-color: #86ef9d;
 }
 
 /* Темная тема */
 [data-theme="dark"] {
   --background-color: #282828;
   --text-color: #3cb756;
-  --light-dark-background-clor: #596755;
+  --light-dark-background-color: #596755;
   --light-dark-text-color: #86ef9d;
 }
 
@@ -58,4 +58,21 @@ body {
     width: 95%; /* Можно сделать еще меньше, если требуется */
     border-radius: 0.5rem;
   }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
 }

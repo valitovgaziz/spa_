@@ -29,6 +29,7 @@ export default {
   padding: 0.6rem;
   border-radius: 50%;
   box-shadow: 1px 2px 3px rgb(179, 210, 216);
+  background-color: var(--background-color);
 }
 
 .hamburger:hover {
@@ -38,7 +39,7 @@ export default {
 .line {
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: var(--text-color);
   transition: all 0.3s ease;
 }
 

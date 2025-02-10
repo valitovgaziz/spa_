@@ -78,6 +78,7 @@ export default {
   border-radius: 4px;
   z-index: 1000;
   box-shadow: 1px 2px 3px rgb(117, 194, 208);
+  background-color: var(--background-color);
 }
 
 .dropdown-item {
@@ -87,6 +88,6 @@ export default {
 }
 
 .dropdown-item:hover {
-  background-color: var(--light-dark-background-clor);
+  background-color: var(--light-dark-background-color);
 }
 </style>

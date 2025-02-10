@@ -85,7 +85,6 @@ export default {
 }
 </script>
 
-
 <style scoped>
 .menu {
     height: 100%;
@@ -103,17 +102,16 @@ export default {
     width: 25vw;
     min-width: 300px;
     visibility: hidden;
-    margin: auto;
     border-radius: 1rem;
-    box-shadow: 1px 2px 3px blue;
+    box-shadow: 1px 2px 3px rgb(141, 225, 214);
     padding: 0.5rem;
-    background-color: white;
     list-style-type: none;
 }
 
 li {
     width: 100%;
     padding: 0.3rem;
+    text-decoration: none;
 }
 
 li * {
@@ -122,7 +120,7 @@ li * {
 
 li:hover {
     cursor: pointer;
-    background-color: rgb(97, 189, 189);
+    background-color: rgb(92, 113, 113);
     border-radius: 0.3rem;
 }
 
