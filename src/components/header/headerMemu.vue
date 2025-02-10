@@ -106,6 +106,7 @@ export default {
     box-shadow: 1px 2px 3px rgb(141, 225, 214);
     padding: 0.5rem;
     list-style-type: none;
+    background-color: var(--background-color);  
 }
 
 li {

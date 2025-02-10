@@ -3,15 +3,15 @@
   --background-color: #ffffff;
   --text-color: #1d1c1c;
   --light-dark-background-color: #ffffff;
-  --light-dark-text-color: #86ef9d;
+  --light-dark-text-color: #273f2c;
 }
 
 /* Темная тема */
 [data-theme="dark"] {
   --background-color: #282828;
   --text-color: #3cb756;
-  --light-dark-background-color: #596755;
-  --light-dark-text-color: #86ef9d;
+  --light-dark-background-color: #4e5e49;
+  --light-dark-text-color: #59f37b;
 }
 
 /* Общие стили */
@@ -54,7 +54,7 @@ body {
     margin: 0.5rem;
     min-height: 80vh;
     min-width: auto;
-    max-width: none;
+    max-width: 90vw;
     width: 95%; /* Можно сделать еще меньше, если требуется */
     border-radius: 0.5rem;
   }

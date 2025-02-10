@@ -72,35 +72,41 @@ export default {
   width: 100%;
   max-width: 600px;
   margin: auto;
+  border-radius: 25px;
+  background-color: var(--light-dark-background-color);
+  color: var(--light-dark-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .search-input-container {
   display: flex;
   align-items: center;
-  background: #fff;
-  border-radius: 25px;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
 }
 
 .menu-icon {
   cursor: pointer;
   margin-right: 10px;
+  height: 100%;
 }
 
 .search-input {
   flex-grow: 1;
   border: none;
   outline: none;
-  padding: 10px;
-  border-radius: 20px;
+  border-radius: 2rem;
+  background-color: var(--light-dark-background-color);
+  color: var(--light-dark-text-color);
+}
+
+.search-input::placeholder {
+  color: var(--light-dark-text-color);
 }
 
 .search-button {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
 }
 
 .search-menu {
@@ -108,18 +114,17 @@ export default {
   top: 60px;
   left: 0;
   right: 0;
-  background: #fff;
+  background: none;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
 .menu-item {
-  padding: 10px;
   cursor: pointer;
 }
 
 .menu-item:hover {
-  background-color: #f0f0f0;
+  background-color: none;
 }
 </style>
