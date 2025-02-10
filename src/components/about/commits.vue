@@ -4,8 +4,13 @@
       Произошла ошибка: {{ error }}
     </ul>
     <ul v-else>
+      <h2>Commits</h2>
       <li v-for="commit in commits" :key="commit.sha">
-        <strong>{{ commit.commit.author.date.slice(0, 11) }}:</strong> {{ commit.commit.message }} <i>{{ commit.author.login }}</i>
+        <i>
+          {{ commit.author.login }}
+          {{ commit.commit.author.date.slice(0, 10) }} 
+          {{ commit.commit.message }}
+        </i>
       </li>
     </ul>
   </template>
