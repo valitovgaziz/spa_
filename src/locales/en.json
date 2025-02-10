@@ -35,6 +35,10 @@
             "name": "Name",
             "registration": "Registration",
             "registrationB": "Registr"
+        },
+        "commits": {
+            "download": "download...",
+            "errorOc": "an error occurred"
         }
     }
 }

@@ -36,6 +36,10 @@
             "name": "Имя",
             "registration": "Регистрация",
             "registrationB": "Регистрациялау"
+        },
+        "commits": {
+            "download": "Үкенеч...",
+            "errorOc": "Хата булды"
         }
     }
 }

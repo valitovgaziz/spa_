@@ -36,6 +36,10 @@
             "name": "Исем",
             "registration": "Регистрация",
             "registrationB": "Алға"
+        },
+        "commits": {
+            "download": "Үҙләштереү...",
+            "errorOc": "Хата китте"
         }
     }
 }

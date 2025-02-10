@@ -36,6 +36,10 @@
             "name": "Имя",
             "registration": "Регистрация",
             "registrationB": "Зарегистрироваться"
+        },
+        "commits": {
+            "download": "Загрузка...",
+            "errorOc": "произошла ошибка"
         }
     }
 }
