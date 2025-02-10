@@ -8,14 +8,14 @@
         <label for="email">
           {{ t('messages.inout.email') }}:
         </label>
-        <input v-model.trim="email" type="email" id="email" required />
+        <input v-model.trim="email" type="email" id="email" required placeholder="t('messages.inout.email')" />
       </div>
 
       <div class="form-group">
         <label for="password">
           {{ t('messages.inout.password') }}:
         </label>
-        <input v-model.trim="password" type="password" id="password" required />
+        <input v-model.trim="password" type="password" id="password" required placeholder="t('messages.inout.password')" />
       </div>
 
       <button type="submit">
