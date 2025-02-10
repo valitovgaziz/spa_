@@ -111,9 +111,9 @@ export default {
 }
 .register-form {
   max-width: fit-content;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   border-radius: 1rem;
-  box-shadow: 1px 2px 3px #609f7d;
+  box-shadow: 1px 2px 5px #609f7d;
 }
 
 .form-group {
@@ -127,21 +127,25 @@ export default {
 .form-group input {
   padding: 0.7rem;
   border-radius: 1rem;
-  border: none;
+  border: 1px solid #439c5f;
   background-color: var(--light-dark-background-color);
   color: var(--texgt-color);
-  box-shadow: 1px 2px 3px inset #439c5f;
+  box-shadow: 1px 2px 3px #439c5f;
 }
 
-button {
+button {  
   margin-top: 1rem;
   padding: 0.7rem 1.4rem;
-  background-color: #2b4f2c;
+  background-color: var(--button-dark-background-color);
   color: white;
   border: none;
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: 1px 2px 3px #a1c3ab;
   border: 1px solid rgb(124, 171, 156);
+}
+
+button:hover {
+  box-shadow: 0px 0px 6px rgb(75, 103, 94);
 }
 </style>

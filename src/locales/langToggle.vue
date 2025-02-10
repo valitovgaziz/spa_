@@ -85,6 +85,7 @@ export default {
   padding: 8px 16px;
   cursor: pointer;
   color: var(--text-color);
+  border-radius: 1rem;
 }
 
 .dropdown-item:hover {
