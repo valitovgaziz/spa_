@@ -21,6 +21,11 @@
         "tripFreedomAdventure": {
             "name": "Trip & Freedom & Adventure",
             "text": "The development of the Trip&Freedom&Adventure application represents a contribution to creating a useful product for society. This work plays an important role in professional growth and development. The mission of this app is to help users discover new horizons, plan their travels, and enjoy adventures without unnecessary hassle. The app will benefit both its users and myself personally by allowing me to deepen my knowledge in programming, interface design, and mobile app development. Participating in this project also provides an opportunity to demonstrate creativity and bring ideas to life that can enhance people's quality of living. Daily work on the application brings us closer to creating a convenient and functional product that will become an indispensable tool for travelers. This project inspires continuous progress, learning new skills, and making contributions to technological and societal advancement."
+        },
+        "aboutL": {
+            "donat-request": "Please support the project",
+            "donat-coffee": "For coffee",
+            "developers": "Developers"
         }
     }
 }

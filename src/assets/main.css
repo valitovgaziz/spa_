@@ -1,7 +1,7 @@
 /* Светлая тема (по умолчанию) */
 :root {
   --background-color: #ffffff;
-  --text-color: #1d1c1c;
+  --text-color: #1c1d1d;
   --light-dark-background-color: #ffffff;
   --light-dark-text-color: #273f2c;
 }
@@ -25,6 +25,7 @@ body {
   width: 100%;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  min-width: 320px;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem 0 0 0;
 }
 
 /* Адаптивные стили для мобильных устройств */
