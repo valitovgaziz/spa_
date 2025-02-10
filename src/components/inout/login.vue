@@ -1,24 +1,38 @@
 <template>
     <div class="login-form">
-      <h1>Логин</h1>
+      <h1>
+        {{ t('messages.inout.login') }}
+      </h1>
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="email">
+            {{ t('messages.inout.email') }}:
+          </label>
           <input v-model.trim="email" type="email" id="email" required />
         </div>
         
         <div class="form-group">
-          <label for="password">Пароль:</label>
+          <label for="password">
+            {{ t('messages.inout.password') }}:
+          </label>
           <input v-model.trim="password" type="password" id="password" required />
         </div>
         
-        <button type="submit">Войти</button>
+        <button type="submit">
+          {{ t('messages.inout.login') }}
+        </button>
       </form>
     </div>
   </template>
   
   <script>
+  import { useI18n } from 'vue-i18n';
+
   export default {
+    setup() {
+      const { t } = useI18n();
+      return { t };
+    },
     data() {
       return {
         email: '',

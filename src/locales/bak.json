@@ -27,6 +27,15 @@
             "donat-request": "проектты хуплауығыҙҙы һорайым",
             "donat-coffee": "Ҡәхңүәгә",
             "developers": "Эшеселәр"
+        },
+        "inout": {
+            "login": "Инеү",
+            "logout": "Сығыу",
+            "email": "Эектрон-почьта",
+            "password": "Йәшерен Һүҙ",
+            "name": "Исем",
+            "registration": "Регистрация",
+            "registrationB": "Алға"
         }
     }
 }

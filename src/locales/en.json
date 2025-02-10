@@ -26,6 +26,15 @@
             "donat-request": "Please support the project",
             "donat-coffee": "For coffee",
             "developers": "Developers"
+        },
+        "inout": {
+            "login": "Login",
+            "logout": "Logout",
+            "email": "Email",
+            "password": "Password",
+            "name": "Name",
+            "registration": "Registration",
+            "registrationB": "Registr"
         }
     }
 }

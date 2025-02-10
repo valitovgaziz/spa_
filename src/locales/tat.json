@@ -27,6 +27,15 @@
             "donat-request": "проектны хуплавыгызны сорыйм",
             "donat-coffee": "Кофега",
             "developers": "Разарботчиглар"
+        },
+        "inout": {
+            "login": "Войти",
+            "logout": "Выйти",
+            "email": "Э-почьта",
+            "password": "Пароль",
+            "name": "Имя",
+            "registration": "Регистрация",
+            "registrationB": "Регистрациялау"
         }
     }
 }

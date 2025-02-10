@@ -27,6 +27,15 @@
             "donat-request": "Прошу потдержать проект",
             "donat-coffee": "На кофе",
             "developers": "Разработчики"
+        },
+        "inout": {
+            "login": "Войти",
+            "logout": "Выйти",
+            "email": "Э-почьта",
+            "password": "Пароль",
+            "name": "Имя",
+            "registration": "Регистрация",
+            "registrationB": "Зарегистрироваться"
         }
     }
 }
