@@ -4,6 +4,10 @@
     --text-color: #1c1d1d;
     --light-dark-background-color: #ffffff;
     --light-dark-text-color: #273f2c;
+    --disabled-backgroud-color: rgba(23, 62, 31, 0.281);
+    --button-background-color: #85d2a7;
+    --button-text-color: #bac677;
+    --disabled-dark-background-color: rgba(55, 64, 62, 0.2);
   }
   
   /* Темная тема */
@@ -12,5 +16,7 @@
     --text-color: #3cb756;
     --light-dark-background-color: #4e5e49;
     --light-dark-text-color: #59f37b;
+    --disabled-dark-background-color: rgba(159, 193, 185, 0.2);
+    --button-dark-background-color: #0a0b0a;
   }
   

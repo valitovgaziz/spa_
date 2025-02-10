@@ -99,29 +99,34 @@ export default {
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: var(--light-dark-background-color);
+}
+
+.add-review textarea::placeholder {
+  color: var(--light-dark-text-color);
 }
 
 .add-review button {
   padding: 10px 20px;
-  background-color: #42b983;
+  background-color: var(--button-background-color);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.7rem;
   cursor: pointer;
   margin-right: 10px;
 }
 
 .add-review button:disabled {
-  background-color: #ccc;
+  background-color: var(--disabled-dark-background-color);
   cursor: not-allowed;
 }
 
 .reviews-list {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .review-item {
-  background: #f9f9f9;
+  background: var(--light-dark-background-color);
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -132,7 +137,7 @@ export default {
 }
 
 .review-item small {
-  color: #666;
+  color: var(--light-dark-text-color);
   font-size: 0.9em;
 }
 </style>
