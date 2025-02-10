@@ -1,20 +1,6 @@
 @import url('./fonts.css');
-
-/* Светлая тема (по умолчанию) */
-:root {
-  --background-color: #ffffff;
-  --text-color: #1c1d1d;
-  --light-dark-background-color: #ffffff;
-  --light-dark-text-color: #273f2c;
-}
-
-/* Темная тема */
-[data-theme="dark"] {
-  --background-color: #282828;
-  --text-color: #3cb756;
-  --light-dark-background-color: #4e5e49;
-  --light-dark-text-color: #59f37b;
-}
+@import url('./colors.css');
+@import url('./linksStyle.css');
 
 /* Общие стили */
 html,
@@ -64,19 +50,3 @@ body {
   }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:active {
-  color: inherit;
-}

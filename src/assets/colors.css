@@ -1,0 +1,16 @@
+/* Светлая тема (по умолчанию) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #1c1d1d;
+    --light-dark-background-color: #ffffff;
+    --light-dark-text-color: #273f2c;
+  }
+  
+  /* Темная тема */
+  [data-theme="dark"] {
+    --background-color: #282828;
+    --text-color: #3cb756;
+    --light-dark-background-color: #4e5e49;
+    --light-dark-text-color: #59f37b;
+  }
+  

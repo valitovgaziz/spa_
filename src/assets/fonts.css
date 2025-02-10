@@ -16,10 +16,15 @@
 :root {
     --font-primary: 'OpenSansVariableFont', Arial, sans-serif;
     --font-secondary: 'OpenSansItalicVariableFont', Arial, sans-serif;
+
+    --weight-light: 300;
+    --weight-normal: 400;
+    --weight-bold: 700;
 }
 
 body {
     font-family: var(--font-primary);
+    font-weight: var(--weight-normal);
 }
 
 h1, h2, h3 {
