@@ -13,7 +13,7 @@
 import Menu from './headerMemu.vue';
 import Logo from './logo-rl-about.vue';
 import Lang from '../../locales/langToggle.vue';
-import DarkThemeToggleI from '../toggels/darkThemeToggle.vue';
+import DarkThemeToggleI from './darkThemeToggle.vue';
 
 export default {
     components: {

@@ -50,28 +50,30 @@ export default {
 .language-selector {
   position: relative;
   display: inline-block;
-}
-
-.lang-icon {
-  cursor: pointer;
-  font-size: 1.5em;
-  color: #333;
+  background-color: var(--light-dark-background-clor);
+  color: var(--text-color);
   box-shadow: 1px 2px 3px rgb(117, 194, 208);
   border-radius: 50%;
   padding: 0.5rem;
 }
 
-.lang-icon:hover {
+
+.language-selector:hover {
+  border-radius: 50%;
   box-shadow: 0px 0px 6px rgb(117, 194, 208);
   box-shadow: 0px 0px 7px rgb(117, 194, 208);
   box-shadow: 0px 0px 8px rgb(117, 194, 208);
+}
+
+.lang-icon {
+  cursor: pointer;
+  font-size: 1.5em;
 }
 
 .dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
   z-index: 1000;
@@ -81,10 +83,10 @@ export default {
 .dropdown-item {
   padding: 8px 16px;
   cursor: pointer;
-  color: #333;
+  color: var(--text-color);
 }
 
 .dropdown-item:hover {
-  background-color: rgb(201, 228, 233);
+  background-color: var(--light-dark-background-clor);
 }
 </style>

@@ -35,7 +35,7 @@ export default {
 <style scoped>
 .footer {
     height: 3rem;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;

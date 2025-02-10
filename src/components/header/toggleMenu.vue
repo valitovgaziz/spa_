@@ -1,8 +1,8 @@
 <template>
   <div class="hamburger" @click="toggleMenu">
-      <div :class="['line', { 'line-1': isMenuVisible }]"></div>
-      <div :class="['line', { 'line-2': isMenuVisible }]"></div>
-      <div :class="['line', { 'line-3': isMenuVisible }]"></div>
+    <div :class="['line', { 'line-1': isMenuVisible }]"></div>
+    <div :class="['line', { 'line-2': isMenuVisible }]"></div>
+    <div :class="['line', { 'line-3': isMenuVisible }]"></div>
   </div>
 </template>
 
@@ -10,10 +10,10 @@
 export default {
   name: 'HamburgerMenu',
   props: {
-      isMenuVisible: {
-          type: Boolean,
-          required: true,
-      },
+    isMenuVisible: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>
@@ -26,6 +26,13 @@ export default {
   justify-content: space-around;
   height: 24px;
   width: 24px;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 1px 2px 3px rgb(179, 210, 216);
+}
+
+.hamburger:hover {
+  box-shadow: 0px 0px 6px rgb(146, 171, 176);
 }
 
 .line {

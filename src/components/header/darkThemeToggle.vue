@@ -59,8 +59,18 @@
   .theme-toggle {
     display: flex;
     align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px rgb(179, 210, 216);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
   }
   
+  .theme-toggle:hover {
+    box-shadow: 0px 0px 6px rgb(179, 210, 216);
+  }
+
   .theme-toggle__label {
     display: flex;
     align-items: center;
