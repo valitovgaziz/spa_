@@ -100,6 +100,7 @@ export default {
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: var(--light-dark-background-color);
+  box-shadow: 1px 2px 3px rgb(61, 154, 96);
 }
 
 .add-review textarea::placeholder {
@@ -108,12 +109,13 @@ export default {
 
 .add-review button {
   padding: 10px 20px;
-  background-color: var(--button-background-color);
-  color: white;
+  background-color: var(--button-dark-background-color);
+  color: var(--text-color);
   border: none;
   border-radius: 0.7rem;
   cursor: pointer;
   margin-right: 10px;
+  box-shadow: 1px 2px 3px rgb(61, 154, 96);
 }
 
 .add-review button:disabled {
@@ -130,6 +132,7 @@ export default {
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 10px;
+  box-shadow: 1px 2px 3px rgb(61, 154, 96);
 }
 
 .review-item p {
