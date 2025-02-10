@@ -36,6 +36,7 @@ export default {
 .footer {
     height: 3rem;
     width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: row;
     align-items: center;

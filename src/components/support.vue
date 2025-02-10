@@ -75,21 +75,19 @@
   
   <style scoped>
   .support-form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 1rem;
   }
   
   h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
   
   label {
@@ -102,9 +100,16 @@
   textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-radius: 1rem;
     font-size: 16px;
+    background-color: var(--light-dark-background-color);
+    box-shadow: 1px 2px 3px rgb(0, 255, 162);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--light-dark-text-color);
   }
   
   textarea {
@@ -113,14 +118,15 @@
   }
   
   button {
-    width: 100%;
+    width: 50%;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    color: var(--light-dark-text-color);
+    background-color: var(--light-dark-background-color);
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 1px 2px 3px rgb(100, 199, 153);
   }
   
   button:disabled {
