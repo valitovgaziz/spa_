@@ -5,10 +5,12 @@
 
     <!-- Форма для добавления отзыва -->
     <div class="add-review">
-      <textarea v-model="newReview" placeholder="Напишите ваш отзыв..." rows="4"></textarea>
-      <button @click="submitReview" :disabled="!newReview.trim()">Оставить отзыв</button>
+      <textarea v-model="newReview" :placeholder="t('messages.reviews.textareaplaceholder')" rows="4"></textarea>
+      <button @click="submitReview" :disabled="!newReview.trim()">
+        {{ t('messages.reviews.button') }}
+      </button>
       <button @click="toggleShowAll" :disabled="reviews.length === 0">
-        {{ showAll ? 'Скрыть' : 'Показать все' }}
+        {{ showAll ? t('messages.reviews.hide') : t('messages.reviews.viewAll') }}
       </button>
     </div>
 
@@ -94,7 +96,7 @@ export default {
 }
 
 .add-review textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -125,6 +127,7 @@ export default {
 
 .reviews-list {
   margin-top: 2rem;
+  width: 90%;
 }
 
 .review-item {

@@ -16,7 +16,11 @@
         "logout": "Logout",
         "reviews": {
             "h2review": "Review",
-            "h4review": "Introduce yourself and tell what you like and what could be improved."
+            "h4review": "Introduce yourself and tell what you like and what could be improved.",
+            "textareaplaceholder": "Write your review here",
+            "button": "Submit",
+            "viewAll": "View All",
+            "hide": "Hide"
         },
         "tripFreedomAdventure": {
             "name": "Trip & Freedom & Adventure",

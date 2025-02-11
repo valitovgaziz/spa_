@@ -34,6 +34,7 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
+import { errorMessages } from 'vue/compiler-sfc';
 
 export default {
   setup() {
@@ -62,7 +63,7 @@ export default {
         this.$router.push('/login'); // Переход на страницу логина
       }).catch((error) => {
         console.error(error);
-        alert('Что-то пошло не так. Попробуйте еще раз.');
+        alert('Что-то пошло не так. Попробуйте еще раз.' + error);
       });
     },
     isValid(username, email, password) {

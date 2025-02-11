@@ -27,6 +27,9 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
+import { ref } from 'vue';
+import { useAuthStore } from '../../auth/stores/auth.store';
+import { useRouter } from 'vue-router';
 
 export default {
   setup() {
@@ -74,21 +77,21 @@ export default {
     },
     async loginUser(data) {
       console.log("Login by this data: ", data);
-      // try {
-      //   const response = await fetch('/login', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     },
-      //     body: JSON.stringify(data)
-      //   });
+      try {
+        const response = await fetch('https://yalarba.ru/api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
 
-      //   if (!response.ok) {
-      //     throw new Error('Неверный email или пароль');
-      //   }
-      // } catch (error) {
-      //   throw error;
-      // }
+        if (!response.ok) {
+          throw new Error('Неверный email или пароль');
+        }
+      } catch (error) {
+        throw error;
+      }
     }
   }
 };

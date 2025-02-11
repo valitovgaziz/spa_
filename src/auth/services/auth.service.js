@@ -5,6 +5,7 @@ const API_URL = 'https://yalarba.ru/api';
 
 const login = async (credentials) => {
   const response = await axios.post(`${API_URL}/auth/login`, credentials);
+  console.log(credentials);
   return response.data;
 };
 
