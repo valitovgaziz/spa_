@@ -15,7 +15,8 @@
         <label for="password">
           {{ t('messages.inout.password') }}:
         </label>
-        <input v-model.trim="password" type="password" id="password" required placeholder="t('messages.inout.password')" />
+        <input v-model.trim="password" type="password" id="password" required
+          placeholder="t('messages.inout.password')" />
       </div>
 
       <button type="submit">
@@ -30,6 +31,11 @@ import { useI18n } from 'vue-i18n';
 import { ref } from 'vue';
 import { useAuthStore } from '../../auth/stores/auth.store';
 import { useRouter } from 'vue-router';
+
+const email = ref('');
+const password = ref('');
+const authStore = useAuthStore();
+const router = useRouter();
 
 export default {
   setup() {
@@ -75,23 +81,9 @@ export default {
 
       return true;
     },
-    async loginUser(data) {
-      console.log("Login by this data: ", data);
-      try {
-        const response = await fetch('https://yalarba.ru/api/auth/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
-
-        if (!response.ok) {
-          throw new Error('Неверный email или пароль');
-        }
-      } catch (error) {
-        throw error;
-      }
+    async loginUser(email, password) {
+      await authStore.login({ email: email, password: password });
+      router.push('/dashboard');
     }
   }
 };
