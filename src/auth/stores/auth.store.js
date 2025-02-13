@@ -22,14 +22,11 @@ export const useAuthStore = defineStore('auth', () => {
 
   const checkAuth = async () => {
     const token = localStorage.getItem('token');
-    console.log(token);
     if (token) {
       try {
         const response = await AuthService.checkAuth(token);
         user.value = response.user;
-        console.log(user);
         isAuthenticated.value = true;
-        console.log(isAuthenticated);
       } catch (error) {
         logout();
       }
