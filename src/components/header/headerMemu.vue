@@ -37,8 +37,8 @@
                     {{ t('messages.login') }}
                 </router-link>
             </li>
-            <li v-on:click="$refs.logout.$el.click()">
-                <router-link to="/logout" ref="logout">
+            <li v-on:click="$refs.logout.$el.click()" id="logout">
+                <router-link to="/" ref="logout" v-on:click=this.authStore.logout()>
                     {{ t('messages.logout') }}
                 </router-link>
             </li>
@@ -49,11 +49,15 @@
 <script>
 import { useI18n } from 'vue-i18n';
 import HamburgerMenu from './toggleMenu.vue';
+import { useAuthStore } from '@/auth/stores/auth.store';
+
+
 
 export default {
     setup() {
         const { t } = useI18n();
-        return { t };
+        const authStore = useAuthStore();
+        return { t, authStore };
     },
     name: 'menu',
     components: {
@@ -79,7 +83,7 @@ export default {
             if (!menuElement.contains(event.target)) {
                 this.isMenuVisible = false;
             }
-        },
+        }
     }
 
 }
