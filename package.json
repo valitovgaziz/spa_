@@ -15,7 +15,6 @@
     "express": "^4.21.2",
     "pg": "^8.13.1",
     "pinia": "^2.3.1",
-    "spa": "file:",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.0",
     "vue-material-design-icons": "^5.3.1",

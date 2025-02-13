@@ -77,6 +77,29 @@ app.post('/login', async (req, res) => {
     }
 });
 
+// Эндпоинт для проверки токенов
+app.get('/check', async (req, res) => {
+    try {
+      // Извлекаем токен из заголовка Authorization
+      const authorizationHeader = req.headers.authorization;
+      if (!authorizationHeader) {
+        return res.status(401).send({ message: 'No token provided' });
+      }
+  
+      // Разделяем строку на части: Bearer и сам токен
+      const token = authorizationHeader.split(' ')[1];
+  
+      // Проверяем токен
+      const decodedToken = jwt.verify(token, SECRET_KEY);
+  
+      // Если всё хорошо, отправляем положительный ответ
+      res.send({ message: 'Token is valid', userId: decodedToken.userId });
+    } catch (err) {
+      // Если произошла ошибка, возвращаем сообщение об ошибке
+      res.status(401).send({ message: err.message });
+    }
+  });
+
 // Запуск сервера
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

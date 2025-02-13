@@ -1,4 +1,4 @@
-// src/services/auth.service.js
+// src/auth/services/auth.service.js
 import axios from 'axios';
 
 const API_URL = 'https://yalarba.ru/api';

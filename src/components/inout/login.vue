@@ -1,5 +1,9 @@
 <template>
-  <div class="login-form">
+  <div class="logout" v-if="isAuthenticated">
+    <p>Welcome {{ user.name }}</p>
+    <button @click="logout">Logout</button>
+  </div>
+  <div v-else class="login-form">
     <h1>
       {{ t('messages.inout.login') }}
     </h1>
@@ -28,18 +32,23 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useAuthStore } from '../../auth/stores/auth.store';
 import { useRouter } from 'vue-router';
 
 const email = ref('');
 const password = ref('');
 const authStore = useAuthStore();
-const router = useRouter();
+
+const { user, isAuthenticated } = authStore;
 
 export default {
   setup() {
     const { t } = useI18n();
+    onMounted(async () => {
+      await authStore.checkAuth();
+    });
+    console.log(isAuthenticated);
     return { t };
   },
   data() {
@@ -57,14 +66,15 @@ export default {
       const credentials = {
         email: this.email,
         password: this.password
-      }
+      };
       authStore.login(credentials)
-      .then(() => {
-        this.$router.push('/'); // Переход на главную страницу
-      }).catch((error) => {
-        console.error(error);
-        alert('Неверный email или пароль. Попробуйте снова.');
-      });
+        .then(() => {
+          this.$router.push('/'); // Переход на главную страницу
+        }).catch((error) => {
+          console.error(error);
+          alert('Неверный email или пароль. Попробуйте снова.');
+        });
+
     },
     isValid(email, password) {
       if (email.length === 0 || password.length === 0) {
@@ -81,6 +91,9 @@ export default {
       }
 
       return true;
+    },
+    logout() {
+      authStore.logout();
     }
   }
 };

@@ -1,4 +1,4 @@
-// src/stores/auth.store.js
+// src/auth/stores/auth.store.js
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import AuthService from '../services/auth.service.js';
@@ -22,11 +22,14 @@ export const useAuthStore = defineStore('auth', () => {
 
   const checkAuth = async () => {
     const token = localStorage.getItem('token');
+    console.log(token);
     if (token) {
       try {
         const response = await AuthService.checkAuth(token);
         user.value = response.user;
+        console.log(user);
         isAuthenticated.value = true;
+        console.log(isAuthenticated);
       } catch (error) {
         logout();
       }
