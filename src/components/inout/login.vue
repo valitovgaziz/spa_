@@ -8,7 +8,7 @@
         <label for="email">
           {{ t('messages.inout.email') }}:
         </label>
-        <input v-model.trim="email" type="email" id="email" required placeholder="t('messages.inout.email')" />
+        <input v-model.trim="email" type="email" id="email" required :placeholder="t('messages.inout.email')" />
       </div>
 
       <div class="form-group">
@@ -16,7 +16,7 @@
           {{ t('messages.inout.password') }}:
         </label>
         <input v-model.trim="password" type="password" id="password" required
-          placeholder="t('messages.inout.password')" />
+          :placeholder="t('messages.inout.password')" />
       </div>
 
       <button type="submit">
@@ -54,11 +54,12 @@ export default {
         alert("Пожалуйста, заполните все поля корректно.");
         return;
       }
-
-      this.loginUser({
+      const credentials = {
         email: this.email,
         password: this.password
-      }).then(() => {
+      }
+      authStore.login(credentials)
+      .then(() => {
         this.$router.push('/'); // Переход на главную страницу
       }).catch((error) => {
         console.error(error);
@@ -80,10 +81,6 @@ export default {
       }
 
       return true;
-    },
-    async loginUser(email, password) {
-      await authStore.login({ email: email, password: password });
-      router.push('/dashboard');
     }
   }
 };
