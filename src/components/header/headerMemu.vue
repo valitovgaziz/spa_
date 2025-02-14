@@ -37,11 +37,6 @@
                     {{ t('messages.login') }}
                 </router-link>
             </li>
-            <li v-on:click="$refs.logout.$el.click()" id="logout">
-                <router-link to="/" ref="logout" v-on:click=this.authStore.logout()>
-                    {{ t('messages.logout') }}
-                </router-link>
-            </li>
         </ul>
     </div>
 </template>
