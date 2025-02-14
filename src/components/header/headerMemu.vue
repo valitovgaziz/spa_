@@ -1,5 +1,5 @@
 <template>
-    <div class="menu" v-on:click="toggleMenu">
+    <div class="menuH" v-on:click="toggleMenu">
         <HamburgerMenu :isMenuVisible="isMenuVisible" />
         <ul id="ul-m" :class="{ visible: isMenuVisible }">
             <li v-on:click="$refs.profile.$el.click()">
@@ -59,7 +59,7 @@ export default {
         const authStore = useAuthStore();
         return { t, authStore };
     },
-    name: 'menu',
+    name: 'menuH',
     components: {
         HamburgerMenu,
     },
@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style scoped>
-.menu {
+.menuH {
     height: 100%;
     position: relative;
     display: flex;

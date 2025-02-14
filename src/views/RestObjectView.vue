@@ -1,7 +1,7 @@
 <template>
     <FHeader />
     <RestObject  :place="mockPlace" />
-    <Footer />
+    <FooterB />
 </template>
 
 <style></style>
@@ -10,13 +10,13 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer/footer.vue';
+import FooterB from '../components/footerB/footerB.vue';
 import RestObject from '../components/restObject/restObject.vue';
 
 export default {
     components: {
         FHeader,
-        Footer,
+        FooterB,
         RestObject,
     },
     data() {

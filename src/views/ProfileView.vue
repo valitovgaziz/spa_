@@ -1,7 +1,7 @@
 <template>
   <FHeader />
   <Profile />
-  <Footer />
+  <FooterB />
 </template>
 
 
@@ -9,13 +9,13 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer/footer.vue';
+import FooterB from '../components/footerB/footerB.vue';
 import Profile from '../components/profile/profile.vue';
 
 export default {
   components: {
     FHeader,
-    Footer,
+    FooterB,
     Profile,
   },
 };

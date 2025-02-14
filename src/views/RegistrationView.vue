@@ -1,7 +1,7 @@
 <template>
     <FHeader />
     <Registration />
-    <Footer />
+    <FooterB />
 </template>
 
 <style></style>
@@ -10,13 +10,13 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer/footer.vue';
+import FooterB from '../components/footerB/footerB.vue';
 import Registration from '../components/inout/registration.vue';
 
 export default {
     components: {
         FHeader,
-        Footer,
+        FooterB,
         Registration,
     },
 };

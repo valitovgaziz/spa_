@@ -1,7 +1,7 @@
 <template>
     <FHeader />
     <Filosofy />
-    <Footer />
+    <FooterB />
 </template>
 
 <style>
@@ -10,12 +10,12 @@
 
 <script>
 import FHeader from '../components/header/fullHeader.vue';
-import Footer from '../components/footer/footer.vue';
+import FooterB from '../components/footerB/footerB.vue';
 import Filosofy from '../components/filosofy.vue';
 
 export default {
     components: {
-        Footer,
+        FooterB,
         FHeader,
         Filosofy,
     },

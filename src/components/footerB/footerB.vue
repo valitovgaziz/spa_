@@ -19,7 +19,7 @@ export default {
     components: {
         MenuIcon,
     },
-    name: 'footer',
+    name: 'footerB',
     methods: {
         goBack() {
             this.$router.go(-1);

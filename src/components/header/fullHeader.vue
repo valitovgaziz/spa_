@@ -1,28 +1,28 @@
 <template>
     <div class="header">
-        <Logo />
+        <LogoH />
         <DarkThemeToggleI />
         <Lang />
-        <Menu />
+        <MenuH />
     </div>
 </template>
 
 
 
 <script>
-import Menu from './headerMemu.vue';
-import Logo from './logo-rl-about.vue';
+import MenuH from './headerMemu.vue';
+import LogoH from './logo-rl-about.vue';
 import Lang from '../../locales/langToggle.vue';
 import DarkThemeToggleI from './darkThemeToggle.vue';
 
 export default {
     components: {
-        Menu,
-        Logo,
+        MenuH,
+        LogoH,
         Lang,
         DarkThemeToggleI,
     },
-    name: 'header',
+    name: 'headerM',
 }
 </script>
 
