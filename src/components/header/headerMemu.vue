@@ -34,7 +34,7 @@
             </li>
             <li v-on:click="$refs.login.$el.click()">
                 <router-link to="/login" ref="login">
-                    {{ t('messages.login') }}
+                    {{ authStore.isAuthenticated ? t('messages.logout') : t('messages.login') }}
                 </router-link>
             </li>
         </ul>
