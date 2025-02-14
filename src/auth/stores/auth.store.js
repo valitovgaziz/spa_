@@ -5,17 +5,18 @@ import AuthService from '../services/auth.service.js';
 import { jwtDecode } from 'jwt-decode';
 
 export const useAuthStore = defineStore('auth', () => {
-  const user = ref(null);
+  const user = reactive({username: '', email: '', id: 0, token: ''});
   const isAuthenticated = ref(false);
 
   const login = async (credentials) => {
     try {
       const response = await AuthService.login(credentials);
       const decodedToken = jwtDecode(response.token);
-      user.value = decodedToken.user;
-      console.log(user.value);
+      user.name = decodedToken.user.username;
+      user.id = decodedToken.user.id;
+      user.email = decodedToken.user.email;
       isAuthenticated.value = true;
-      localStorage.setItem('token', response.token);
+      user.token = response.token;
 
     } catch (error) {
       console.error('Login failed', error);
@@ -24,14 +25,16 @@ export const useAuthStore = defineStore('auth', () => {
   };
 
   const logout = () => {
-    user.value = null;
     isAuthenticated.value = false;
-    localStorage.removeItem('token');
+    user.name = '';
+    user.token = '';
+    user.email = '';
+    user.id = 0;
   };
 
   const checkAuth = async () => {
     try {
-      const token = localStorage.getItem('token');
+      const token = user.token;
       if (token) {
         try {
           const response = await AuthService.checkAuth(token);

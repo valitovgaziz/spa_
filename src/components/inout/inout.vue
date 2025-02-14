@@ -1,7 +1,7 @@
 <template>
     <div v-if="authStore.isAuthenticated" class="logout">
         <div>
-            <p>Good by</p>
+            <p>Good by {{ authStore.user.name }}!</p>
             <button @click="logout">Logout</button>
         </div>
     </div>
