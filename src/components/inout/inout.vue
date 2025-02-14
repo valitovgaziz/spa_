@@ -1,5 +1,6 @@
 <template>
-    <div v-if="authStore.isAuthenticated" class="logout">
+    <div v-if="isLoad">{{ t('messages.load') }} . . .</div>
+    <div v-else-if="authStore.isAuthenticated" class="logout">
         <div>
             <p>Good by {{ authStore.user.name }}!</p>
             <button @click="logout">Logout</button>
@@ -47,19 +48,25 @@ const isValidP = ref(true);
 const { t } = useI18n();
 const router = useRouter();
 const authStore = useAuthStore();
+let isLoad = ref(false);
 
 
 onMounted(async () => {
+    isLoad = true;
     authStore.checkAuth().catch(error => console.error('Check auth failed', error));
+    isLoad = false;
 });
 
 async function handleSubmit() {
+    isLoad = true;
     if (!isValidEmail(email.value) || !isValidPassword(password.value)) {
         alert("Пожалуйста, заполните все поля корректно.");
+        isLoad = false;
         return;
     }
     try {
         await authStore.login({ email: email.value, password: password.value });
+        isLoad = false;
         router.push('/');
     } catch (error) {
         console.error(error);
@@ -91,7 +98,9 @@ function isValidEmail(email) {
 }
 
 function logout() {
+    isLoad = true;
     authStore.logout();
+    isLoad = false;
     router.push('/');
 }
 </script>

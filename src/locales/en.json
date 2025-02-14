@@ -1,6 +1,7 @@
 {
     "languageCode": "en",
     "messages": {
+        "load": "Load . . .",
         "title": "Title",
         "description": "Description",
         "buttonText": "Button",

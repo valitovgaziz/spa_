@@ -1,6 +1,7 @@
 {
     "languageCode": "bak",
     "messages": {
+        "load": "Тейәү . . .",
         "title": "Исем",
         "description": "Анлатма",
         "buttonText": "Баҫма",

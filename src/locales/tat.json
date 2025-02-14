@@ -1,6 +1,7 @@
 {
     "languageCode": "tat",
     "messages": {
+        "load": "Йөкләү . . .",
         "title": "Исем",
         "description": "Анлатма",
         "buttonText": "Баҫма",

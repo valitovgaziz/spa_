@@ -1,6 +1,7 @@
 {
     "languageCode": "ru",
     "messages": {
+        "load": "Загрузка . . .",
         "title": "Заголовок",
         "description": "Описание",
         "buttonText": "Кнопка",
