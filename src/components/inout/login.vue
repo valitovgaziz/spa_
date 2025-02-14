@@ -1,7 +1,9 @@
 <template>
-  <div class="logout" v-if="isAuthenticated">
-    <p>Welcome {{ user.name }}</p>
-    <button @click="logout">Logout</button>
+  <div v-if="isAuthenticated" class="logout">
+    <div>
+      <p>Welcome {{ user.name }}</p>
+      <button @click="logout">Logout</button>
+    </div>
   </div>
   <div v-else class="login-form">
     <h1>
@@ -36,47 +38,38 @@ import { ref, onMounted } from 'vue';
 import { useAuthStore } from '../../auth/stores/auth.store';
 import { useRouter } from 'vue-router';
 
-const email = ref('');
-const password = ref('');
-const authStore = useAuthStore();
-
-const { user, isAuthenticated } = authStore;
-
 export default {
   setup() {
     const { t } = useI18n();
+    const router = useRouter();
+    const authStore = useAuthStore();
+    
+    const email = ref('');
+    const password = ref('');
+
     onMounted(async () => {
-      await authStore.checkAuth();
+      await authStore.checkAuth(); // Гарантируем, что checkAuth выполнится до первого рендера
     });
-    console.log(isAuthenticated);
-    return { t };
-  },
-  data() {
-    return {
-      email: '',
-      password: ''
-    };
-  },
-  methods: {
-    handleSubmit() {
-      if (!this.isValid(this.email, this.password)) {
+
+    async function handleSubmit() {
+      if (!isValid(email.value, password.value)) {
         alert("Пожалуйста, заполните все поля корректно.");
         return;
       }
       const credentials = {
-        email: this.email,
-        password: this.password
+        email: email.value,
+        password: password.value
       };
-      authStore.login(credentials)
-        .then(() => {
-          this.$router.push('/'); // Переход на главную страницу
-        }).catch((error) => {
-          console.error(error);
-          alert('Неверный email или пароль. Попробуйте снова.');
-        });
+      try {
+        await authStore.login(credentials);
+        router.push('/');
+      } catch (error) {
+        console.error(error);
+        alert('Неверный email или пароль. Попробуйте снова.');
+      }
+    }
 
-    },
-    isValid(email, password) {
+    function isValid(email, password) {
       if (email.length === 0 || password.length === 0) {
         return false;
       }
@@ -91,10 +84,21 @@ export default {
       }
 
       return true;
-    },
-    logout() {
+    }
+
+    function logout() {
       authStore.logout();
     }
+
+    return {
+      t,
+      email,
+      password,
+      handleSubmit,
+      isValid,
+      logout,
+      ...authStore, // Расширяем объект возвращаемых значений свойствами из authStore
+    };
   }
 };
 </script>

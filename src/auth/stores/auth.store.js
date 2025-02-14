@@ -2,6 +2,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import AuthService from '../services/auth.service.js';
+import { jwtDecode } from 'jwt-decode';
 
 export const useAuthStore = defineStore('auth', () => {
   const user = ref(null);
@@ -9,7 +10,8 @@ export const useAuthStore = defineStore('auth', () => {
 
   const login = async (credentials) => {
     const response = await AuthService.login(credentials);
-    user.value = response.user;
+    const decodedToken = jwtDecode(response.token);
+    user.value = decodedToken.user;
     isAuthenticated.value = true;
     localStorage.setItem('token', response.token);
   };
@@ -25,6 +27,7 @@ export const useAuthStore = defineStore('auth', () => {
     if (token) {
       try {
         const response = await AuthService.checkAuth(token);
+        console.loog(response.user);
         user.value = response.user;
         isAuthenticated.value = true;
       } catch (error) {

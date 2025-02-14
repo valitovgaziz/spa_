@@ -13,9 +13,24 @@
     font-stretch: 50% 200%;
 }
 
+@font-face {
+    font-family: 'RobotoVariableFont';
+    src: url('./fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+}
+
+@font-face {
+    font-family: 'RobotoItablicVarFont';
+    src: url('./fonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf') format('truetype-variations');
+    font-style: italic;
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+}
+
 :root {
     --font-primary: 'OpenSansVariableFont', Arial, sans-serif;
-    --font-secondary: 'OpenSansItalicVariableFont', Arial, sans-serif;
+    --font-secondary: 'RobotoVariableFont', Arial, sans-serif;
 
     --weight-light: 300;
     --weight-normal: 400;
