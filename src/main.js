@@ -10,8 +10,8 @@ import { createPinia } from 'pinia';
 const spaAppVue3 = createApp(SPA_VUE_App);
 const pinia = createPinia();
 
+spaAppVue3.use(pinia);
 spaAppVue3.use(appRouter);
 spaAppVue3.use(i18n);
-spaAppVue3.use(pinia);
 
 spaAppVue3.mount('#app');

@@ -1,7 +1,7 @@
 <template>
   <div v-if="isAuthenticated" class="logout">
     <div>
-      <p>Welcome {{ user.name }}</p>
+      <p>Good by</p>
       <button @click="logout">Logout</button>
     </div>
   </div>
@@ -35,7 +35,7 @@
 <script>
 import { useI18n } from 'vue-i18n';
 import { ref, onMounted } from 'vue';
-import { useAuthStore } from '../../auth/stores/auth.store';
+import { useAuthStore } from '@/auth/stores/auth.store';
 import { useRouter } from 'vue-router';
 
 export default {
@@ -43,7 +43,7 @@ export default {
     const { t } = useI18n();
     const router = useRouter();
     const authStore = useAuthStore();
-    
+
     const email = ref('');
     const password = ref('');
 
@@ -88,6 +88,7 @@ export default {
 
     function logout() {
       authStore.logout();
+      router.push('/');
     }
 
     return {
@@ -97,7 +98,8 @@ export default {
       handleSubmit,
       isValid,
       logout,
-      ...authStore, // Расширяем объект возвращаемых значений свойствами из authStore
+      user: authStore.user, // Реактивная ссылка на user
+      isAuthenticated: authStore.isAuthenticated, // Реактивная ссылка на isAuthenticated
     };
   }
 };

@@ -1,6 +1,6 @@
 // src/auth/stores/auth.store.js
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 import AuthService from '../services/auth.service.js';
 import { jwtDecode } from 'jwt-decode';
 
@@ -9,11 +9,18 @@ export const useAuthStore = defineStore('auth', () => {
   const isAuthenticated = ref(false);
 
   const login = async (credentials) => {
-    const response = await AuthService.login(credentials);
-    const decodedToken = jwtDecode(response.token);
-    user.value = decodedToken.user;
-    isAuthenticated.value = true;
-    localStorage.setItem('token', response.token);
+    try {
+      const response = await AuthService.login(credentials);
+      const decodedToken = jwtDecode(response.token);
+      user.value = decodedToken.user;
+      console.log(user.value);
+      isAuthenticated.value = true;
+      localStorage.setItem('token', response.token);
+
+    } catch (error) {
+      console.error('Login failed', error);
+      throw error;
+    }
   };
 
   const logout = () => {
@@ -23,16 +30,21 @@ export const useAuthStore = defineStore('auth', () => {
   };
 
   const checkAuth = async () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      try {
-        const response = await AuthService.checkAuth(token);
-        console.loog(response.user);
-        user.value = response.user;
-        isAuthenticated.value = true;
-      } catch (error) {
-        logout();
+    try {
+      const token = localStorage.getItem('token');
+      if (token) {
+        try {
+          const response = await AuthService.checkAuth(token);
+          user.value = response.user;
+          isAuthenticated.value = true;
+        } catch (error) {
+          logout();
+        }
       }
+    } catch (error) {
+      console.error('Check auth failed', error);
+      throw error;
+
     }
   };
 

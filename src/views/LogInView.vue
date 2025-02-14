@@ -8,16 +8,8 @@
 
 
 
-<script>
+<script setup>
 import FHeader from '../components/header/fullHeader.vue';
 import FooterB from '../components/footerB/footerB.vue';
-import LogIn from '../components/inout/login.vue';
-
-export default {
-    components: {
-        FHeader,
-        FooterB,
-        LogIn,
-    },
-};
+import LogIn from '../components/inout/inout.vue';
 </script>
