@@ -9,10 +9,20 @@
 
 
 
-<script setup>
+<script>
 import FHeader from '../components/header/fullHeader.vue';
 import FooterB from '../components/footerB/footerB.vue';
 import Results from '../components/saerch_results/results.vue';
 import searchLine from '@/components/searchLine/searchLine.vue';
 import SearchLine from '@/components/searchLine/searchLine.vue';
+
+export default {
+    name: 'searchResult',
+    components: {
+        FHeader,
+        SearchLine,
+        Results,
+        FooterB,
+    }
+}
 </script>

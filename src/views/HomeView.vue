@@ -7,8 +7,14 @@
 
 <style src="../assets/main.css"></style>
 
-<script setup>
+<script>
 import FHeader from '../components/header/fullHeader.vue';
 import FooterB from '../components/footerB/footerB.vue';
 import SearchLine from '../components/searchLine/searchLine.vue';
+
+export default [
+  FHeader,
+  SearchLine,
+  FooterB,
+]
 </script>
