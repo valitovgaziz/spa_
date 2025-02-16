@@ -8,5 +8,6 @@ deploy:
 	npm run build
 	git add .
 	git commit -m 'build deploy'
+	git push
 
-@default=run
+.DEFAULT_GOAL := run
