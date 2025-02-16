@@ -20,4 +20,5 @@ export default defineConfig({
       strict: false,
     },
   },
+  clearScreen: true,
 })

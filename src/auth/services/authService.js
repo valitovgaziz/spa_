@@ -1,17 +1,15 @@
 // src/auth/services/auth.service.js
 import axios from 'axios';
 
-const API_URL = 'https://yalarba.ru/api';
-
 const login = async (credentials) => {
-  const response = await axios.post(`${API_URL}/auth/login`, credentials, {
+  const response = await axios.post('/auth/login', credentials, {
     'Content-Type': 'application/json'
   });
   return response.data;
 };
 
 const checkAuth = async (token) => {
-  const response = await axios.get(`${API_URL}/auth/check`, {
+  const response = await axios.get('/auth/check', {
     headers: { Authorization: `Bearer ${token}` },
   });
   return response.data;
