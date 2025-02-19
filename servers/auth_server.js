@@ -9,9 +9,33 @@ const app = express();
 const PORT = 6000;
 const SECRET_KEY = '89044513447896254393432085332044367'; // Замените на свой секретный ключ
 
+const allowedOrigins = [
+    'https://yalarba.ru',
+    'http://localhost:5173'
+]
+
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: (origin, callback) => {
+        // Разрешить запросы без origin (например, от мобильных приложений или Postman)
+        if (!origin) return callback(null, true);
+
+        // Проверить, есть ли домен в списке разрешенных
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Разрешенные методы
+    allowedHeaders: ['Content-Type', 'Authorization'], // Разрешенные заголовки
+    credentials: true, // Разрешить учетные данные
+}));
+
+
+// Обработка preflight-запросов
+app.options('/api/auth/login', cors());
 
 // Подключение к PostgreSQL
 const pool = new Pool({
@@ -95,25 +119,25 @@ app.post('/login', async (req, res) => {
 // Эндпоинт для проверки токенов
 app.get('/check', async (req, res) => {
     try {
-      // Извлекаем токен из заголовка Authorization
-      const authorizationHeader = req.headers.authorization;
-      if (!authorizationHeader) {
-        return res.status(401).send({ message: 'No token provided' });
-      }
-  
-      // Разделяем строку на части: Bearer и сам токен
-      const token = authorizationHeader.split(' ')[1];
-  
-      // Проверяем токен
-      const decodedToken = jwt.verify(token, SECRET_KEY);
-  
-      // Если всё хорошо, отправляем положительный ответ
-      res.send({ message: 'Token is valid', userId: decodedToken.userId });
+        // Извлекаем токен из заголовка Authorization
+        const authorizationHeader = req.headers.authorization;
+        if (!authorizationHeader) {
+            return res.status(401).send({ message: 'No token provided' });
+        }
+
+        // Разделяем строку на части: Bearer и сам токен
+        const token = authorizationHeader.split(' ')[1];
+
+        // Проверяем токен
+        const decodedToken = jwt.verify(token, SECRET_KEY);
+
+        // Если всё хорошо, отправляем положительный ответ
+        res.send({ message: 'Token is valid', userId: decodedToken.userId });
     } catch (err) {
-      // Если произошла ошибка, возвращаем сообщение об ошибке
-      res.status(401).send({ message: err.message });
+        // Если произошла ошибка, возвращаем сообщение об ошибке
+        res.status(401).send({ message: err.message });
     }
-  });
+});
 
 // Запуск сервера
 app.listen(PORT, () => {
