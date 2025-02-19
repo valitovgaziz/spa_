@@ -11,8 +11,7 @@
 import store from '@/auth/stores/store.js';
 import LogoutCooky from '@/components/inout/logout.vue';
 import LoginCooky from '@/components/inout/login.vue';
-import Logout from '@/components/inout/logout.vue';
-import { ref, onMounted, computed } from 'vue';
+import { onMounted, computed } from 'vue';
 
 export default {
     components: {

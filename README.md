@@ -16,3 +16,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+
+Добавить валидацию CSRF token's

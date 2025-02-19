@@ -3,6 +3,7 @@
         <LogoH />
         <DarkThemeToggleI />
         <Lang />
+        <Flag />
         <MenuH />
     </div>
 </template>
@@ -14,9 +15,11 @@ import MenuH from './headerMemu.vue';
 import LogoH from './logo-rl-about.vue';
 import Lang from '../../locales/langToggle.vue';
 import DarkThemeToggleI from './darkThemeToggle.vue';
+import Flag from '@/components/header/flagProfile.vue';
 
 export default {
     components: {
+        Flag,
         MenuH,
         LogoH,
         Lang,

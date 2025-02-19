@@ -70,7 +70,22 @@ app.post('/login', async (req, res) => {
         // Создание JWT токена
         const token = jwt.sign({ userId: user.rows[0].id }, SECRET_KEY, { expiresIn: '1h' });
 
-        res.status(200).json({ token });
+
+        // Установка HTTP-only куки
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: true,                   // Обязательно для sameSite: 'none'
+            sameSite: 'strict',             // Защита от CSRF
+            maxAge: 1000 * 60 * 60 * 24,    // Время жизни куки (1 день)
+        });
+
+        const userData = {
+            id: user.rows[0].id,
+            name: user.rows[0].username,
+            email: user.rows[0].email
+        }
+
+        res.status(200).json(userData);
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Something went wrong' });
