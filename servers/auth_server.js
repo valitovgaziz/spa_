@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const morganLogger = require('./serverLoggers/morganLogger.js');
+
 
 const app = express();
 const PORT = 6000;
@@ -15,6 +17,7 @@ const allowedOrigins = [
 ]
 
 // Middleware
+app.use(morganLogger);
 app.use(bodyParser.json());
 app.use(cors({
     origin: (origin, callback) => {

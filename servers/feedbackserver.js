@@ -2,12 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 const cors = require('cors');
+const logger = require('./serverLoggers/winstonLogger');
+const morganLogger = require('./serverLoggers/morganLogger');
 
 const app = express();
 const port = 3000;
 
 app.use(cors());
-
+app.use(morganLogger);
 app.use(bodyParser.json());
 
 const pool = new Pool({
@@ -20,7 +22,9 @@ const pool = new Pool({
 
 app.get('/reviews', async(req, res) => {
 	try {
+		logger.info("req body = " + req.body);
 		const result = await pool.query('SELECT * FROM reviews;');
+		logger.info(result.rows);
 		res.json(result.rows);
 	} catch (err) {
 		console.error(err);
@@ -30,8 +34,10 @@ app.get('/reviews', async(req, res) => {
 
 app.post('/reviews', async(req, res) => {
 	const { text } = req.body;
-	try {
+	try {		
+		logger.info("req body = " + req.body);
 		const result = await pool.query('INSERT INTO reviews (text) VALUES ($1) RETURNING *', [text]);
+		logger.info(result.rows);
 		res.status(201).json(result.rows[0]);
 	} catch (err) {
 		console.log(err);

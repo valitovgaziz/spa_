@@ -18,7 +18,13 @@ export default createStore({
       try {
         console.log("login request");
         const response = await axiosInstanse.post('/api/auth/login', credentials);
-        commit('SET_USER', response.data.user);
+        console.log(response.data);
+        let user = {
+          id: response.data.id,
+          name: response.data.name,
+          email: response.data.email
+        }
+        commit('SET_USER', user);
       } catch (error) {
         console.log(error);
         throw error;
@@ -26,7 +32,7 @@ export default createStore({
     },
     async logout({ commit }) {
       try {
-        await axiosInstanse.post('/api/logout');
+        await axiosInstanse.post('/api/auth/logout');
         commit('SET_USER', null);
       } catch (error) {
         throw error;

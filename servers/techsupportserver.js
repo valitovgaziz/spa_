@@ -2,12 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 const cors = require('cors');
+const logger = require('./serverLoggers/winstonLogger.js');
+const morganLogger = require('./serverLoggers/morganLogger.js');
 
 const app = express();
 const port = 4000;
 
 app.use(cors());
-
+app.use(morganLogger);
 app.use(bodyParser.json());
 
 const pool = new Pool({
@@ -19,9 +21,11 @@ const pool = new Pool({
 });
 
 app.post('/support', async (req, res) => {
+    logger.info("req body = " + req.body);
     const { email, text } = req.body;
     try {
         const result = await pool.query('INSERT INTO posts (email, text) VALUES ($1, $2) RETURNING *', [email, text]);
+        logger.info("result.rows = " + result.rows);
         res.status(201).json(result.rows[0]);
     } catch (err) {
         console.error(err);
@@ -30,8 +34,10 @@ app.post('/support', async (req, res) => {
 });
 
 app.get('/support', async (req, res) => {
+    logger.info("req body = " + req.body);
     try {
         const result = await pool.query('SELECT * FROM posts;');
+        logger.info("result.rows = " + result.rows);
         res.json(result.rows);
     } catch (err) {
         console.error(err);
