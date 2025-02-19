@@ -19,3 +19,5 @@ npm run build
 
 
 Добавить валидацию CSRF token's
+
+На сервере настроить логирование и проверки для http only cooky

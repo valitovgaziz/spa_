@@ -34,9 +34,9 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
-import { errorMessages } from 'vue/compiler-sfc';
 
 export default {
+  name: "register-form",
   setup() {
     const { t } = useI18n();
     return { t };
@@ -76,6 +76,11 @@ export default {
         return false;
       }
 
+      const regexName = /^[a-zA-Z0-9_]{3,20}$/;
+      if (!regexName.text(username)) {
+        return false;
+      }
+
       if (password.length < 6) {
         return false;
       }
@@ -110,6 +115,7 @@ export default {
   padding-top: 0;
   height: 1.5rem;
 }
+
 .register-form {
   max-width: fit-content;
   padding: 1rem 2rem 2rem 2rem;
@@ -134,7 +140,7 @@ export default {
   box-shadow: 1px 2px 3px #439c5f;
 }
 
-button {  
+button {
   margin-top: 1rem;
   padding: 0.7rem 1.4rem;
   background-color: var(--button-dark-background-color);
