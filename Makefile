@@ -10,4 +10,4 @@ deploy:
 	git commit -m 'build deploy'
 	git push
 
-.DEFAULT_GOAL := run
+.DEFAULT_GOAL := run 	

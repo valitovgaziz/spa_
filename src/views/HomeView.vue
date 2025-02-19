@@ -12,9 +12,12 @@ import FHeader from '../components/header/fullHeader.vue';
 import FooterB from '../components/footerB/footerB.vue';
 import SearchLine from '../components/searchLine/searchLine.vue';
 
-export default [
-  FHeader,
-  SearchLine,
-  FooterB,
-]
+export default {
+  name: 'HomeView',
+  components: {
+    FHeader,
+    SearchLine,
+    FooterB,
+  }
+}
 </script>
